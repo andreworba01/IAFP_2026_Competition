@@ -90,19 +90,24 @@ IAFP_2026_Competition/
 │   └── __init__.py
 ├── outputs/            # Figures and exported results
 ├── requirements.txt
-└── README.md
+└── README.md ```
+
 ---
+
 🚀 Getting Started
 1️⃣ Clone the repository
+```bash
 git clone https://github.com/<your-username>/IAFP_2026_Competition.git
 cd IAFP_2026_Competition
-
+```
 2️⃣ Install dependencies
+```bash
 pip install -r requirements.txt
-
+```
 3️⃣ Run univariate screening (baseline analysis)
+```bash
 python -m scripts.01_univariate_screening --input ListeriaSoil_clean.csv
-
+```
 
 Optional flags:
 
