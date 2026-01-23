@@ -90,7 +90,30 @@ IAFP_2026_Competition/
 │   └── __init__.py
 ├── outputs/            # Figures and exported results
 ├── requirements.txt
-└── README.md ```
+└── README.md
+
+⚙️ Installation
+Dependencies
+
+This project is implemented in Python and relies on the following core libraries:
+
+NumPy
+
+Pandas
+
+Scikit-learn
+
+SciPy
+
+Statsmodels
+
+Matplotlib
+
+Seaborn
+
+TensorFlow / Keras (for downstream deep learning models)
+
+All required dependencies are listed in requirements.txt.
 
 ---
 
