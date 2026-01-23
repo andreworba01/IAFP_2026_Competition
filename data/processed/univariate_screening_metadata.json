@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "2026-01-23T15:54:01.130645",
+  "input_file": "ListeriaSoil_clean.csv",
+  "seed": 42,
+  "dataset_shape": [
+    622,
+    36
+  ],
+  "label_counts": {
+    "1": 311,
+    "0": 311
+  },
+  "label_proportions": {
+    "1": 0.5,
+    "0": 0.5
+  },
+  "n_predictors_tested": 34,
+  "notes": [
+    "Label defined as (Number of Listeria isolates obtained > 0).",
+    "Correlation computed on numeric predictors excluding target columns.",
+    "Univariate test: Mann\u2013Whitney U (two-sided); Effect size: Cliff's delta.",
+    "Multiple-testing correction: FDR (Benjamini\u2013Hochberg)."
+  ]
+}
