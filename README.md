@@ -93,7 +93,7 @@ IAFP_2026_Competition/
 └── README.md
 ```
 
-⚙️ Installation
+### ⚙️ Installation
 Dependencies
 
 This project is implemented in Python and relies on the following core libraries:
@@ -110,7 +110,7 @@ All required dependencies are listed in requirements.txt.
 
 ---
 
-🚀 Getting Started
+### 🚀 Getting Started
 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/<your-username>/IAFP_2026_Competition.git
@@ -126,17 +126,15 @@ python -m scripts.01_univariate_screening --input ListeriaSoil_clean.csv
 ```
 ---
 
-Optional flags:
+#### Optional flags:
 
---save-results : save outputs to data/processed/
-
---save-plots : export figures to outputs/
-
---show-plots : display figures interactively
+- save-results : save outputs to data/processed/
+- save-plots : export figures to outputs/
+- show-plots : display figures interactively
 
 ---
 
-🔁 Reproducibility and Code Quality
+#### 🔁 Reproducibility and Code Quality
 
 Reproducibility is a core judging criterion for the competition. This repository ensures reproducible research by:
 
@@ -148,8 +146,7 @@ Reproducibility is a core judging criterion for the competition. This repository
 
 ---
 
-
-🏆 Competition Information
+#### 🏆 Competition Information
 
 This work is submitted to the IAFP AI Benchmarking Student Competition on Predictive Food Safety Models, supported by Cornell University, Agroknow, and academic–industry collaborators.
 
