@@ -164,6 +164,7 @@ The final cleaned dataset includes **622 soil samples**, with the outcome variab
 ```text
 Listeria present:  311 samples (50%)
 Listeria absent:   311 samples (50%)
+```
 
 ### Correlation Structure of Predictors
 
