@@ -165,4 +165,98 @@ The final cleaned dataset includes **622 soil samples**, with the outcome variab
 Listeria present:  311 samples (50%)
 Listeria absent:   311 samples (50%)
 
+### Correlation Structure of Predictors
+
+A Pearson correlation matrix was computed across soil chemistry, climate, land-use, and geographic variables to examine linear dependencies and potential multicollinearity among predictors.
+
+**Key observations:**
+- Soil nutrients (e.g., total nitrogen, organic matter, and trace metals) form correlated clusters  
+- Climate variables exhibit strong regional structure  
+- Land-use variables show expected compositional relationships  
+- No single predictor displays extreme correlation with the outcome label  
+
+These patterns indicate structured but non-redundant predictors, supporting their retention in downstream tree-based models.
+
+---
+
+### Univariate Effect Size Analysis (Cliff’s Delta)
+
+To quantify the magnitude and direction of associations between individual predictors and *Listeria* presence, **Cliff’s Delta** was used as a nonparametric effect size measure. This approach emphasizes practical relevance beyond statistical significance alone.
+
+#### Top Variables by Absolute Cliff’s Delta
+
+| Variable | Median (Absent) | Median (Present) | Δ (Present − Absent) | Cliff’s Δ | Adjusted p-value |
+|---------|-----------------|------------------|----------------------|-----------|------------------|
+| Shrubland (%) | 3.6009 | 0.3208 | −3.2801 | −0.44 | 5.9e−20 |
+| Moisture | 0.1723 | 0.2887 | +0.1164 | +0.42 | 4.5e−18 |
+| Cropland (%) | 1.1679 | 6.0231 | +4.8552 | +0.39 | 5.2e−16 |
+| Longitude | −102.45 | −90.58 | +11.87 | +0.38 | 1.5e−15 |
+| Pasture (%) | 0.3966 | 4.9012 | +4.5046 | +0.31 | 7.4e−11 |
+
+All reported associations remained statistically significant after false discovery rate (FDR) correction.
+
+---
+
+### Land-use Composition by *Listeria* Presence
+
+Comparisons of mean land-use composition revealed systematic differences between *Listeria*-positive and *Listeria*-negative soil samples.
+
+**Observed patterns:**
+- *Listeria*-absent soils are dominated by **shrubland and grassland**
+- *Listeria*-present soils show higher proportions of **cropland and pasture**
+- Shrubland coverage is markedly reduced in positive samples  
+
+These patterns highlight the importance of land-use context in environmental *Listeria* persistence.
+
+---
+
+### Biological Interpretation
+
+#### Land-use associations
+
+*Listeria* presence is positively associated with **managed and disturbed landscapes**, particularly:
+- Cropland  
+- Pasture  
+
+In contrast, *Listeria* absence is associated with **semi-natural vegetation**, including:
+- Shrubland  
+- Grassland  
+
+This supports an **anthropogenic association hypothesis**, where *Listeria* persistence in soils reflects:
+- Agricultural disturbance  
+- Livestock activity  
+- Manure application  
+- Repeated environmental re-inoculation  
+
+#### Soil and climate context
+
+- Higher soil moisture and nutrient availability (e.g., nitrogen, organic matter, trace metals) are associated with *Listeria* presence  
+- These variables likely act as **contextual modifiers**, influencing survival and persistence rather than serving as single causal drivers  
+
+---
+
+### Implications for Machine Learning Modeling
+
+Despite statistically significant univariate associations, **substantial overlap exists between presence and absence groups across all predictors**.
+
+This indicates that:
+- No single variable provides clean separation  
+- Predictor effects are context-dependent  
+- Nonlinear interactions dominate  
+- Land-use variables are compositional  
+- Soil chemistry variables form correlated ecological gradients  
+
+**Modeling implications:**
+- Linear models alone are insufficient  
+- Tree-based ensemble methods are appropriate  
+- Interpretation tools (e.g., SHAP values) are necessary  
+- Retaining correlated predictors preserves ecological meaning  
+
+---
+
+### Summary Statement
+
+> *Univariate effect size analysis revealed that Listeria presence was negatively associated with semi-natural land cover (e.g., shrubland), while positively associated with soil moisture and managed land-use types, particularly cropland and pasture. However, substantial overlap in predictor distributions between presence and absence groups indicates that Listeria occurrence is not driven by single-variable thresholds, but rather by multivariate and nonlinear interactions, justifying the use of tree-based ensemble models for predictive modeling.*
+
+
 
