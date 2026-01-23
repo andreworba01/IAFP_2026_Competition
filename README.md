@@ -92,6 +92,7 @@ IAFP_2026_Competition/
 ├── requirements.txt
 └── README.md
 ```
+---
 
 ### ⚙️ Installation
 Dependencies
