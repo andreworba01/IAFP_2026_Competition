@@ -82,11 +82,9 @@ Metric implementations are documented within the model training scripts (e.g., `
 IAFP_2026_Competition/
 ├── data/
 │   ├── raw/            # Original datasets
-│   ├── interim/        # Cleaned but not final datasets
 │   └── processed/      # Analysis- and model-ready datasets
 ├── scripts/
 │   ├── 01_univariate_screening.py
-│   └── __init__.py
 ├── src/
 │   ├── config.py       # Centralized path management
 │   └── __init__.py
