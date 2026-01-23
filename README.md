@@ -154,3 +154,15 @@ This work is submitted to the IAFP AI Benchmarking Student Competition on Predic
 📄 Written report deadline: March 1, 2026
 📍 Finalists presentation: IAFP 2026 Annual Meeting (New Orleans, LA)
 
+---
+## 🔍 Exploratory Analysis and Preprocessing Results
+
+### Label Distribution
+
+The final cleaned dataset includes **622 soil samples**, with the outcome variable defined as the binary presence or absence of *Listeria spp.* based on culture results.
+
+```text
+Listeria present:  311 samples (50%)
+Listeria absent:   311 samples (50%)
+
+
