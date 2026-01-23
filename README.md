@@ -124,6 +124,7 @@ pip install -r requirements.txt
 ```bash
 python -m scripts.01_univariate_screening --input ListeriaSoil_clean.csv
 ```
+---
 
 Optional flags:
 
@@ -133,19 +134,20 @@ Optional flags:
 
 --show-plots : display figures interactively
 
+---
+
 🔁 Reproducibility and Code Quality
 
 Reproducibility is a core judging criterion for the competition. This repository ensures reproducible research by:
 
-Using repository-relative paths (no local or cloud-specific paths)
+-- Using repository-relative paths (no local or cloud-specific paths)
+-- Providing a fully script-based pipeline (no hidden notebook state)
+-- Recording metadata for each analysis run
+-- Using deterministic random seeds where applicable
+-- Maintaining modular, well-documented code
 
-Providing a fully script-based pipeline (no hidden notebook state)
+---
 
-Recording metadata for each analysis run
-
-Using deterministic random seeds where applicable
-
-Maintaining modular, well-documented code
 
 🏆 Competition Information
 
