@@ -236,25 +236,6 @@ This supports an **anthropogenic association hypothesis**, where *Listeria* pers
 
 ---
 
-### Implications for Machine Learning Modeling
-
-Despite statistically significant univariate associations, **substantial overlap exists between presence and absence groups across all predictors**.
-
-This indicates that:
-- No single variable provides clean separation  
-- Predictor effects are context-dependent  
-- Nonlinear interactions dominate  
-- Land-use variables are compositional  
-- Soil chemistry variables form correlated ecological gradients  
-
-**Modeling implications:**
-- Linear models alone are insufficient  
-- Tree-based ensemble methods are appropriate  
-- Interpretation tools (e.g., SHAP values) are necessary  
-- Retaining correlated predictors preserves ecological meaning  
-
----
-
 ### Summary Statement
 
 > *Univariate effect size analysis revealed that Listeria presence was negatively associated with semi-natural land cover (e.g., shrubland), while positively associated with soil moisture and managed land-use types, particularly cropland and pasture. However, substantial overlap in predictor distributions between presence and absence groups indicates that Listeria occurrence is not driven by single-variable thresholds, but rather by multivariate and nonlinear interactions, justifying the use of tree-based ensemble models for predictive modeling.*
