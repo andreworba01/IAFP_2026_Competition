@@ -139,11 +139,11 @@ python -m scripts.01_univariate_screening --input ListeriaSoil_clean.csv
 
 Reproducibility is a core judging criterion for the competition. This repository ensures reproducible research by:
 
--- Using repository-relative paths (no local or cloud-specific paths)
--- Providing a fully script-based pipeline (no hidden notebook state)
--- Recording metadata for each analysis run
--- Using deterministic random seeds where applicable
--- Maintaining modular, well-documented code
+- Using repository-relative paths (no local or cloud-specific paths)
+- Providing a fully script-based pipeline (no hidden notebook state)
+- Recording metadata for each analysis run
+- Using deterministic random seeds where applicable
+- Maintaining modular, well-documented code
 
 ---
 
