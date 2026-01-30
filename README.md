@@ -241,9 +241,16 @@ This supports an **anthropogenic association hypothesis**, where *Listeria* pers
 > *Univariate effect size analysis revealed that Listeria presence was negatively associated with semi-natural land cover (e.g., shrubland), while positively associated with soil moisture and managed land-use types, particularly cropland and pasture. However, substantial overlap in predictor distributions between presence and absence groups indicates that Listeria occurrence is not driven by single-variable thresholds, but rather by multivariate and nonlinear interactions, justifying the use of tree-based ensemble models for predictive modeling.*
 --- 
 <img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/cc47b825-cea6-486b-a40d-c3033fd27158" />
+#### Figure 1. Spatial distribution of Listeria soil samples across the United States. 
+Geographic distribution of soil sampling locations included in the study. Each point represents an individual soil sample, with color indicating Listeria presence (1) or absence (0). State boundaries are shown for reference. Sampling locations are unevenly distributed across the continental United States, reflecting differences in regional sampling intensity.
+
+---
 <img width="2306" height="1238" alt="Rplot55" src="https://github.com/user-attachments/assets/84f5eba6-67cb-4dc3-bd9b-788cd56e4fd9" />
+#### Figure 2. Spatial distribution of Listeria soil samples incorporating elevation
+Spatial distribution of soil samples across the continental United States, with point color indicating Listeria presence (1) or absence (0) and point size proportional to sampling site elevation (m). State boundaries are shown for geographic context. This visualization highlights heterogeneity in both sampling elevation and Listeria occurrence across regions.
+
 <img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/e0fb4600-2640-4b32-8d81-65b6a7ec9287" />
-
-
+#### Figure 3. State-level prevalence of Listeria presence
+State-level prevalence of Listeria presence estimated from soil samples aggregated by U.S. state. Prevalence is calculated as the proportion of samples positive for Listeria within each state. States with no available samples are shown in grey. Differences in prevalence should be interpreted with caution due to variability in sample size across states.
 
 
