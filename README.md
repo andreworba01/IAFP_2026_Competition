@@ -245,15 +245,21 @@ This supports an **anthropogenic association hypothesis**, where *Listeria* pers
 ##### **Figure 1. Spatial distribution of Listeria soil samples across the United States.**
 Geographic distribution of soil sampling locations included in the study. Each point represents an individual soil sample, with color indicating Listeria presence (1) or absence (0). State boundaries are shown for reference. Sampling locations are unevenly distributed across the continental United States, reflecting differences in regional sampling intensity.
 
+The spatial distribution suggests that Listeria presence varies geographically, with clusters of positive samples in certain regions. These patterns may reflect regional differences in environmental conditions, land use, agricultural practices, or climate, rather than random occurrence, although uneven sampling density limits causal interpretation.
+
 ---
 <img width="2306" height="1238" alt="Rplot55" src="https://github.com/user-attachments/assets/84f5eba6-67cb-4dc3-bd9b-788cd56e4fd9" />
 
 #####  **Figure 2. Spatial distribution of Listeria soil samples incorporating elevation.**
 Spatial distribution of soil samples across the continental United States, with point color indicating Listeria presence (1) or absence (0) and point size proportional to sampling site elevation (m). State boundaries are shown for geographic context. This visualization highlights heterogeneity in both sampling elevation and Listeria occurrence across regions.
 
+Positive and negative samples occur across a wide range of elevations, indicating that elevation alone is unlikely to be a primary determinant of Listeria presence at the national scale. However, elevation may act indirectly through associated factors such as temperature, moisture, and soil characteristics that influence Listeria survival and persistence.
+
 <img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/e0fb4600-2640-4b32-8d81-65b6a7ec9287" />
 
 ##### **Figure 3. State-level prevalence of Listeria presence.**
 State-level prevalence of Listeria presence estimated from soil samples aggregated by U.S. state. Prevalence is calculated as the proportion of samples positive for Listeria within each state. States with no available samples are shown in grey. Differences in prevalence should be interpreted with caution due to variability in sample size across states.
+
+Variation in state-level prevalence suggests that broader regional factors, including climatic conditions, dominant land use, and agricultural intensity, may influence Listeria occurrence. Nonetheless, differences in sampling effort among states introduce uncertainty, and observed prevalence patterns likely reflect a combination of environmental drivers and data availability.
 
 
