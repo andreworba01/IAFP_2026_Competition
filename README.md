@@ -240,5 +240,10 @@ This supports an **anthropogenic association hypothesis**, where *Listeria* pers
 
 > *Univariate effect size analysis revealed that Listeria presence was negatively associated with semi-natural land cover (e.g., shrubland), while positively associated with soil moisture and managed land-use types, particularly cropland and pasture. However, substantial overlap in predictor distributions between presence and absence groups indicates that Listeria occurrence is not driven by single-variable thresholds, but rather by multivariate and nonlinear interactions, justifying the use of tree-based ensemble models for predictive modeling.*
 
+--- 
+<img width="1006" height="1330" alt="image" src="https://github.com/user-attachments/assets/204bd94f-cdfd-4567-bedb-bad59a6000c1" />
+
+
+<img width="1006" height="1330" alt="image" src="https://github.com/user-attachments/assets/00dae6ac-cde0-4186-b958-ec64b2cd6124" />
 
 
