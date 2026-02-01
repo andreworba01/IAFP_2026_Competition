@@ -312,7 +312,6 @@ Variation in state-level prevalence suggests that broader regional factors, incl
 | **Total**        | 621 | 310 | 0.4992     | –                   | 0.061      | 0.069     |
 |                  |     |     |            |                     | -1.218     | -1.160    |
 
---- 
 
 ### Table description (statistical modeling details)
 
