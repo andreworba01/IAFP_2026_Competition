@@ -263,6 +263,7 @@ State-level prevalence of Listeria presence estimated from soil samples aggregat
 Variation in state-level prevalence suggests that broader regional factors, including climatic conditions, dominant land use, and agricultural intensity, may influence Listeria occurrence. Nonetheless, differences in sampling effort among states introduce uncertainty, and observed prevalence patterns likely reflect a combination of environmental drivers and data availability.
 
 ---
+**Table 2.** State-level prevalence and concentration estimates of Listeria contamination in lettuce. For each state, the total number of samples (n), number of positives (k), estimated prevalence with 95% confidence intervals, and modeled mean and 95th percentile concentrations (Cs_Li_mean and Cs_Li_q95) are shown.
 
 | State            | n   | k   | Prevalence | CI (95%)            | Cs_Li_mean | Cs_Li_q95 |
 |------------------|-----|-----|------------|---------------------|------------|-----------|
@@ -310,3 +311,56 @@ Variation in state-level prevalence suggests that broader regional factors, incl
 | New Jersey       | 3   | 0   | 0.000      | [0.000, 0.617]      | 3.88E-02   | 4.76E-02  |
 | **Total**        | 621 | 310 | 0.4992     | –                   | 0.061      | 0.069     |
 |                  |     |     |            |                     | -1.218     | -1.160    |
+
+--- 
+
+### Table description (statistical modeling details)
+
+This table presents state-level estimates of *Listeria* prevalence and concentration derived using a probabilistic modeling framework that explicitly accounts for sampling uncertainty and upper-tail behavior relevant for exposure assessment.
+
+## Prevalence estimation
+
+Prevalence for each state was estimated from the number of positive samples (*k*) out of the total number of samples analyzed (*n*). Uncertainty in prevalence was quantified using the **Agresti–Coull (AC) confidence interval**, defined as follows:
+
+**Adjusted prevalence estimate:**
+
+$$
+\tilde{p} = \frac{k + z^2 / 2}{n + z^2}
+$$
+
+**95% Agresti–Coull confidence interval:**
+
+$$
+\text{CI}_{AC} = \tilde{p} \pm z \sqrt{\frac{\tilde{p}(1 - \tilde{p})}{n + z^2}}
+$$
+
+where \( z = 1.96 \) for a 95% confidence level.
+
+To conservatively propagate prevalence uncertainty into the risk model, the upper bound of the 95% Agresti–Coull confidence interval was used to parameterize a Beta distribution representing state-level prevalence uncertainty:
+
+$$
+p_{\text{state}} \sim \text{Beta}(\alpha, \beta)
+$$
+
+where the Beta parameters were selected to be consistent with the observed data and the upper confidence limit.
+
+## Concentration modeling
+
+Concentration estimates were derived using a Poisson-based modeling approach, assuming that the number of *Listeria* cells per gram follows a Poisson process conditional on contamination:
+
+$$
+C_{L_i} \mid p_{\text{state}} \sim \text{Poisson}(\lambda_{L_i})
+$$
+
+where \( \lambda_{L_i} \) represents the mean concentration of *Listeria* (CFU/g).
+
+From the resulting concentration distributions, two summary statistics were extracted:
+
+- **Cs<sub>Lᵢ</sub><sup>mean</sup>**: mean modeled concentration (CFU/g)
+- **Cs<sub>Lᵢ</sub><sup>q95</sup>**: 95th percentile of the modeled concentration distribution
+
+These metrics together characterize both central tendency and upper-tail behavior relevant to exposure and risk estimation.
+
+## Pooled estimates
+
+The final row of the table reports pooled estimates across all states based on the aggregated dataset.
