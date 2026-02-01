@@ -360,6 +360,21 @@ From the resulting concentration distributions, two summary statistics were extr
 
 These metrics together characterize both central tendency and upper-tail behavior relevant to exposure and risk estimation.
 
+Estimating *Listeria* concentration in soil is challenging. Denis et al. (2022) reported concentrations of up to **6 MPN/g** in soils surrounding a lagoon in France. This value can therefore be considered an approximate **upper limit** that would be difficult to observe in non-agricultural soils, such as those sampled in the study used to derive the concentration estimates reported in Table 2.  
+
+Furthermore, Locatelli et al. (2013) demonstrated that the **limit of detection (LOD)** in dry soil can be as high as **10⁴ CFU/g of dry soil**, which helps explain why relatively few studies are able to quantitatively estimate *Listeria* concentrations in soil matrices. <mark> Therefore, the approximation presented above provides a reasonable basis for risk assessment and modeling.</mark>
+
 #### Pooled estimates
 
 The final row of the table reports pooled estimates across all states based on the aggregated dataset.
+
+
+---
+
+# REFERENCES
+Bilder, C. R., & Loughin, T. M. (2014). Analysis of Categorical Data with R (p. 55).Chapman & Hall/CRC Texts in Statistical Science. CRC Press. Kindle Edition.
+
+Denis, M., Ziebal, C., Boscher, E., Picard, S., Perrot, M., Nova, M. V., Roussel, S., Diara, A., & Pourcher, A. M. (2022). Occurrence and diversity of *Listeria monocytogenes* isolated from two pig manure treatment plants in France. *Microbes and Environments, 37*(4), ME22019. https://doi.org/10.1264/jsme2.ME22019  
+
+Locatelli, A., Depret, G., Jolivet, C., Henry, S., Dequiedt, S., Piveteau, P., & Hartmann, A. (2013). Nation-wide study of the occurrence of *Listeria monocytogenes* in French soils using culture-based and molecular detection methods. *Journal of Microbiological Methods, 93*(3), 242–250. https://doi.org/10.1016/j.mimet.2013.03.017
+
