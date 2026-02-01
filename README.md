@@ -13,7 +13,7 @@ This repository is designed to meet competition requirements for:
 
 ---
 
-## 📖 Data Source and Citation
+## Data Source and Citation
 
 The dataset used in this competition submission is derived from the following peer-reviewed publication:
 
@@ -26,7 +26,7 @@ The dataset used in this competition submission is derived from the following pe
 
 ---
 
-## 🧪 Sample Analysis
+## Sample Analysis
 
 ### Competition Context
 
@@ -38,7 +38,7 @@ The specific focus of this submission is:
 
 ---
 
-## 🎯 Prediction Task
+## Prediction Task
 
 ### Task Type
 - **Binary classification**
@@ -55,7 +55,7 @@ The specific focus of this submission is:
 - Land-use characteristics (e.g., cropland, shrubland)  
 - Geographic information (latitude and longitude)
 
-📄 A detailed description of all predictor and outcome variables is provided in:
+A detailed description of all predictor and outcome variables is provided in:
 - **`ListeriaSoil_Metadata.csv`**
 
 📊 The cleaned and analysis-ready dataset used in this competition submission is:
@@ -63,7 +63,7 @@ The specific focus of this submission is:
 
 ---
 
-## 📈 Evaluation Metrics
+## valuation Metrics
 
 In accordance with the competition evaluation criteria, classification models developed using this pipeline are evaluated using:
 
@@ -76,7 +76,7 @@ Metric implementations are documented within the model training scripts (e.g., `
 
 ---
 
-## 🧰 Repository Structure
+## Repository Structure
 
 ```text
 IAFP_2026_Competition/
@@ -111,7 +111,7 @@ All required dependencies are listed in requirements.txt.
 
 ---
 
-### 🚀 Getting Started
+###  Getting Started
 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/<your-username>/IAFP_2026_Competition.git
@@ -135,7 +135,7 @@ python -m scripts.01_univariate_screening --input ListeriaSoil_clean.csv
 
 ---
 
-#### 🔁 Reproducibility and Code Quality
+#### Reproducibility and Code Quality
 
 Reproducibility is a core judging criterion for the competition. This repository ensures reproducible research by:
 
@@ -147,7 +147,7 @@ Reproducibility is a core judging criterion for the competition. This repository
 
 ---
 
-#### 🏆 Competition Information
+#### Competition Information
 
 This work is submitted to the IAFP AI Benchmarking Student Competition on Predictive Food Safety Models, supported by Cornell University, Agroknow, and academic–industry collaborators.
 
@@ -155,7 +155,7 @@ This work is submitted to the IAFP AI Benchmarking Student Competition on Predic
 📍 Finalists presentation: IAFP 2026 Annual Meeting (New Orleans, LA)
 
 ---
-## 🔍 Exploratory Analysis and Preprocessing Results
+## Exploratory Analysis and Preprocessing Results
 
 ### Label Distribution
 
