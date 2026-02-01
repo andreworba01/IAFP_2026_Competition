@@ -352,7 +352,7 @@ $$
 C_{L_i} \mid p_{\text{state}} \sim \text{Poisson}(\lambda_{L_i})
 $$
 
-where ( \lambda_{L_i} \) represents the mean concentration of *Listeria* (CFU/g).
+where ( $\lambda$) represents the mean concentration of *Listeria* (CFU/g).
 
 From the resulting concentration distributions, two summary statistics were extracted:
 
