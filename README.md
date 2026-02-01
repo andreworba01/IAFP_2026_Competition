@@ -368,6 +368,61 @@ Furthermore, Locatelli et al. (2013) demonstrated that the **limit of detection 
 
 The final row of the table reports pooled estimates across all states based on the aggregated dataset.
 
+--
+# Risk assessment exercise
+
+**Table 2.** State-level prevalence and concentration estimates of Listeria contamination in lettuce. For each state, the total number of samples (n), number of positives (k), estimated prevalence with 95% confidence intervals, and modeled mean and 95th percentile concentrations (Cs_Li_mean and Cs_Li_q95) are shown. Using a sample volume of 1g instead of 25g. 
+| state | n | k | prevalence | ci_95 | Cs_Li_mean | Cs_Li_q95 |
+|------|---:|---:|-----------:|:------:|-----------:|-----------:|
+| Kentucky | 5 | 5 | 1 | [0.511, 1.000] | 13.81131096 | 13.81551056 |
+| South Carolina | 5 | 5 | 1 | [0.511, 1.000] | 13.81093739 | 13.81551056 |
+| Indiana | 26 | 23 | 0.884615385 | [0.702, 0.968] | 3.611396052 | 4.675476891 |
+| Louisiana | 15 | 13 | 0.866666667 | [0.609, 0.975] | 3.906143437 | 5.165043128 |
+| Delaware | 5 | 4 | 0.8 | [0.360, 0.980] | 4.156951058 | 5.592025827 |
+| Alabama | 23 | 18 | 0.782608696 | [0.577, 0.908] | 2.432124124 | 2.995979504 |
+| New York | 12 | 9 | 0.75 | [0.462, 0.917] | 2.548297204 | 3.152735445 |
+| Iowa | 19 | 14 | 0.736842105 | [0.509, 0.885] | 2.205646178 | 2.699125919 |
+| Minnesota | 44 | 32 | 0.727272727 | [0.580, 0.838] | 1.846224540 | 2.246165576 |
+| Ohio | 22 | 16 | 0.727272727 | [0.516, 0.871] | 2.085506174 | 2.549391966 |
+| Illinois | 20 | 14 | 0.7 | [0.479, 0.857] | 1.977314437 | 2.411600427 |
+| Maryland | 10 | 7 | 0.7 | [0.392, 0.897] | 2.312877634 | 2.837500519 |
+| Pennsylvania | 19 | 13 | 0.684210526 | [0.458, 0.848] | 1.915621950 | 2.334193765 |
+| North Dakota | 30 | 20 | 0.666666667 | [0.487, 0.809] | 1.673688526 | 2.032590628 |
+| Arkansas | 14 | 9 | 0.642857143 | [0.386, 0.838] | 1.847353565 | 2.249638626 |
+| Mississippi | 5 | 3 | 0.6 | [0.229, 0.884] | 2.193597097 | 2.683618716 |
+| Georgia | 19 | 11 | 0.578947368 | [0.362, 0.769] | 1.481856882 | 1.798385118 |
+| North Carolina | 14 | 8 | 0.571428571 | [0.326, 0.787] | 1.561307070 | 1.898221969 |
+| Texas | 45 | 24 | 0.533333333 | [0.391, 0.671] | 1.120313990 | 1.367036261 |
+| South Dakota | 36 | 19 | 0.527777778 | [0.370, 0.680] | 1.151162469 | 1.405052185 |
+| Kansas | 2 | 1 | 0.5 | [0.095, 0.905] | 2.406185731 | 2.961145467 |
+| Missouri | 4 | 2 | 0.5 | [0.150, 0.850] | 1.925985123 | 2.344077628 |
+| Wisconsin | 2 | 1 | 0.5 | [0.095, 0.905] | 2.406902956 | 2.965100005 |
+| Wyoming | 9 | 4 | 0.444444444 | [0.188, 0.734] | 1.336806646 | 1.626065519 |
+| Michigan | 14 | 6 | 0.428571429 | [0.213, 0.674] | 1.132596166 | 1.382950116 |
+| Tennessee | 14 | 6 | 0.428571429 | [0.213, 0.674] | 1.132481845 | 1.382452714 |
+| Connecticut | 3 | 1 | 0.333333333 | [0.056, 0.798] | 1.616604836 | 1.963974682 |
+| Massachusetts | 3 | 1 | 0.333333333 | [0.056, 0.798] | 1.615566549 | 1.960648781 |
+| Montana | 24 | 7 | 0.291666667 | [0.147, 0.494] | 0.685442791 | 0.857246238 |
+| Florida | 11 | 3 | 0.272727273 | [0.092, 0.571] | 0.853563642 | 1.054584594 |
+| Oklahoma | 9 | 2 | 0.222222222 | [0.053, 0.557] | 0.821278729 | 1.016922150 |
+| Utah | 14 | 2 | 0.142857143 | [0.028, 0.412] | 0.534146309 | 0.679166997 |
+| Oregon | 17 | 2 | 0.117647059 | [0.020, 0.356] | 0.442602519 | 0.572942101 |
+| Washington | 9 | 1 | 0.111111111 | [0.000, 0.457] | 0.614176054 | 0.773339186 |
+| Maine | 12 | 1 | 0.083333333 | [0.000, 0.375] | 0.473594429 | 0.609341933 |
+| New Mexico | 17 | 1 | 0.058823529 | [0.000, 0.289] | 0.343260417 | 0.455757707 |
+| Colorado | 18 | 1 | 0.055555556 | [0.000, 0.276] | 0.325666666 | 0.433394859 |
+| California | 25 | 1 | 0.04 | [0.000, 0.211] | 0.238715378 | 0.330113105 |
+| Arizona | 8 | 0 | 0 | [0.000, 0.372] | 0.468466999 | 0.603163397 |
+| Idaho | 12 | 0 | 0 | [0.000, 0.282] | 0.333379633 | 0.442641511 |
+| Nevada | 3 | 0 | 0 | [0.000, 0.617] | 0.969402473 | 1.189051631 |
+| New Jersey | 3 | 0 | 0 | [0.000, 0.617] | 0.969701814 | 1.191240163 |
+
+
+
+Based on these findings, we decided to go a step further and use these estimates in a risk assessment exercise. To be intentionally conservative, we used the values in **Table 3** instead of **Table 2**. Table 3 assumes a sample mass of **1 g** rather than **25 g**, which shifts the estimated concentration distribution upward and effectively represents a **worst-case scenario**.
+
+We then used these conservative concentration estimates to run a small model representing the **transfer of *Listeria* from soil to lettuce via rain-splashing**.
+
 
 ---
 
