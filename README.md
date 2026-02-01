@@ -371,7 +371,7 @@ The final row of the table reports pooled estimates across all states based on t
 --
 # Risk assessment exercise
 
-**Table 2.** State-level prevalence and concentration estimates of Listeria contamination in lettuce. For each state, the total number of samples (n), number of positives (k), estimated prevalence with 95% confidence intervals, and modeled mean and 95th percentile concentrations (Cs_Li_mean and Cs_Li_q95) are shown. Using a sample volume of 1g instead of 25g. 
+**Table 3.** State-level prevalence and concentration estimates of Listeria contamination in lettuce. For each state, the total number of samples (n), number of positives (k), estimated prevalence with 95% confidence intervals, and modeled mean and 95th percentile concentrations (Cs_Li_mean and Cs_Li_q95) are shown. Using a sample volume of 1g instead of 25g. 
 | state | n | k | prevalence | ci_95 | Cs_Li_mean | Cs_Li_q95 |
 |------|---:|---:|-----------:|:------:|-----------:|-----------:|
 | Kentucky | 5 | 5 | 1.000 | [0.511, 1.000] | 13.811 | 13.816 |
