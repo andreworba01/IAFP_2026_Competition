@@ -318,7 +318,7 @@ Variation in state-level prevalence suggests that broader regional factors, incl
 
 This table presents state-level estimates of *Listeria* prevalence and concentration derived using a probabilistic modeling framework that explicitly accounts for sampling uncertainty and upper-tail behavior relevant for exposure assessment.
 
-## Prevalence estimation
+#### Prevalence estimation
 
 Prevalence for each state was estimated from the number of positive samples (*k*) out of the total number of samples analyzed (*n*). Uncertainty in prevalence was quantified using the **Agresti–Coull (AC) confidence interval**, defined as follows:
 
@@ -344,7 +344,7 @@ $$
 
 where the Beta parameters were selected to be consistent with the observed data and the upper confidence limit.
 
-## Concentration modeling
+#### Concentration modeling
 
 Concentration estimates were derived using a Poisson-based modeling approach, assuming that the number of *Listeria* cells per gram follows a Poisson process conditional on contamination:
 
@@ -352,7 +352,7 @@ $$
 C_{L_i} \mid p_{\text{state}} \sim \text{Poisson}(\lambda_{L_i})
 $$
 
-where \( \lambda_{L_i} \) represents the mean concentration of *Listeria* (CFU/g).
+where ( \lambda_{L_i} \) represents the mean concentration of *Listeria* (CFU/g).
 
 From the resulting concentration distributions, two summary statistics were extracted:
 
@@ -361,6 +361,6 @@ From the resulting concentration distributions, two summary statistics were extr
 
 These metrics together characterize both central tendency and upper-tail behavior relevant to exposure and risk estimation.
 
-## Pooled estimates
+#### Pooled estimates
 
 The final row of the table reports pooled estimates across all states based on the aggregated dataset.
