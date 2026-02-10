@@ -437,7 +437,18 @@ To reflect this priority, we:
 - Ranked models primarily by **fewest FN**, then **fewest FP**, using **recall** as a tie-breaker.
 - Fine-tuned the best-performing model(s) via hyperparameter search and evaluated final performance on the held-out test set.
 
-**Results summary:** Insert the ranked results table/figure below.
+### Ranked Model Results (Test Set)
+
+| Model | Threshold | TN | FP | FN | TP | Sensitivity (Recall) | Specificity | Balanced Accuracy | ROC AUC | Avg Precision | Chosen Thr (from OOF) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| LogReg (balanced) | 0.321854 | 42 | 21 | 2 | 60 | 0.967742 | 0.666667 | 0.817204 | 0.890169 | 0.833814 | 0.321854 |
+| SVM-RBF (balanced) | 0.307001 | 41 | 22 | 4 | 58 | 0.935484 | 0.650794 | 0.793139 | 0.906298 | 0.906705 | 0.307001 |
+| HistGB | 0.198421 | 56 | 7 | 5 | 57 | 0.919355 | 0.888889 | 0.904122 | 0.958013 | 0.962916 | 0.198421 |
+| LightGBM (recall-leaning) | 0.261349 | 55 | 8 | 6 | 56 | 0.903226 | 0.873016 | 0.888121 | 0.960573 | 0.960990 | 0.261349 |
+| ExtraTrees (balanced) | 0.469331 | 50 | 13 | 6 | 56 | 0.903226 | 0.793651 | 0.848438 | 0.920123 | 0.931038 | 0.469331 |
+| CatBoost (recall-leaning) | 0.495447 | 58 | 5 | 7 | 55 | 0.887097 | 0.920635 | 0.903866 | 0.965438 | 0.970190 | 0.495447 |
+| RF (balanced) | 0.457408 | 53 | 10 | 8 | 54 | 0.870968 | 0.841270 | 0.856119 | 0.940348 | 0.944795 | 0.457408 |
+
 
 
 ---
