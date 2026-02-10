@@ -422,7 +422,22 @@ The final row of the table reports pooled estimates across all states based on t
 Based on these findings, we decided to go a step further and use these estimates in a risk assessment exercise. To be intentionally conservative, we used the values in **Table 3** instead of **Table 2**. Table 3 assumes a sample mass of **1 g** rather than **25 g**, which shifts the estimated concentration distribution upward and effectively represents a **worst-case scenario**.
 
 We then used these conservative concentration estimates to run a small model representing the **transfer of *Listeria* from soil to lettuce via rain-splashing**.
+---
+Model Selection (Food-Safety Priority)
 
+We evaluated multiple binary classifiers (LogReg, SVM-RBF, Random Forest, ExtraTrees, HistGradientBoosting, LightGBM, CatBoost) using an 80/20 train–test split and cross-validation on the training set. Because this is a food-safety screening task, we prioritized high sensitivity (recall) to minimize false negatives (missed positives).
+
+To reflect this priority, we:
+
+Computed out-of-fold (OOF) predicted probabilities on the training set for each model.
+
+Selected a model-specific decision threshold that achieves a target recall (e.g., ≥ 0.90) based on OOF predictions.
+
+Ranked models primarily by fewest FN, then fewest FP, and used recall as a tie-breaker.
+
+Fine-tuned the best-performing model(s) with hyperparameter search and reported final performance on the held-out test set.
+
+Results summary: See the table below for the ranked metrics and chosen thresholds.
 
 ---
 
