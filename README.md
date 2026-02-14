@@ -453,6 +453,9 @@ To reflect this priority, we:
 
 ---
 
+
+---
+
 # REFERENCES
 Bilder, C. R., & Loughin, T. M. (2014). Analysis of Categorical Data with R (p. 55).Chapman & Hall/CRC Texts in Statistical Science. CRC Press. Kindle Edition.
 
