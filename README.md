@@ -453,7 +453,7 @@ To reflect this priority, we:
 
 ---
 
-
+<img width="2306" height="1238" alt="Rplot55" src="outputs/Predicted_probability_presence_rivers_lakes.png" />
 ---
 
 # REFERENCES
