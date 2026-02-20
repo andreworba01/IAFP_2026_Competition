@@ -450,7 +450,8 @@ To reflect this priority, we:
 | RF (balanced) | 0.457408 | 53 | 10 | 8 | 54 | 0.870968 | 0.841270 | 0.856119 | 0.940348 | 0.944795 | 0.457408 |
 
 
-
+## Results
+![AUC curve](outputs/AUC%20curve.png)
 ---
 
 <img width="2306" height="1238" alt="Rplot55" src="outputs/Predicted_probability_presence_rivers_lakes.png" />
