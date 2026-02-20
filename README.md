@@ -273,14 +273,14 @@ To reflect this priority, we:
 ---
 <img width="2306" height="1238" alt="Rplot55" src="https://github.com/user-attachments/assets/84f5eba6-67cb-4dc3-bd9b-788cd56e4fd9" />
 
-#####  **Figure 2. Spatial distribution of Listeria soil samples incorporating elevation.**
+#####  **Figure 1. Spatial distribution of Listeria soil samples incorporating elevation.**
 Spatial distribution of soil samples across the continental United States, with point color indicating Listeria presence (1) or absence (0) and point size proportional to sampling site elevation (m). State boundaries are shown for geographic context. This visualization highlights heterogeneity in both sampling elevation and Listeria occurrence across regions.
 
 The incorporation of elevation suggests a potential association between Listeria absence and higher-elevation sampling sites, as several negative samples (label = 0) are observed at comparatively higher elevations. While positive samples are present across a range of elevations, this visual pattern indicates that elevation—or correlated environmental factors such as temperature, moisture availability, and soil characteristics—may influence Listeria persistence. However, this observation is qualitative and warrants formal statistical evaluation.
 
 <img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/e0fb4600-2640-4b32-8d81-65b6a7ec9287" />
 
-##### **Figure 3. State-level prevalence of Listeria presence.**
+##### **Figure 2. State-level prevalence of Listeria presence.**
 State-level prevalence of Listeria presence estimated from soil samples aggregated by U.S. state. Prevalence is calculated as the proportion of samples positive for Listeria within each state. States with no available samples are shown in grey. Differences in prevalence should be interpreted with caution due to variability in sample size across states.
 
 Variation in state-level prevalence suggests that broader regional factors, including climatic conditions, dominant land use, and agricultural intensity, may influence Listeria occurrence. Nonetheless, differences in sampling effort among states introduce uncertainty, and observed prevalence patterns likely reflect a combination of environmental drivers and data availability.
