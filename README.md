@@ -424,7 +424,7 @@ The final row of the table reports pooled estimates across all states based on t
 Based on these findings, we decided to go a step further and use these estimates in a risk assessment exercise. To remain intentionally conservative, we used the values in **Table 3** rather than **Table 2**. Table 3 assumes a sample mass of **1 g** instead of **25 g**, which shifts the estimated concentration distribution upward and represents a **worst-case scenario**.
 
 We then used these conservative concentration estimates to run a simple model of **transfer of *Listeria* from soil to lettuce via rain splash**.
-
+<img width="2306" height="1238" alt="Rplot55" src="outputs/Predicted_probability_presence_rivers_lakes.png" />
 ---
 
 ## Model Selection (Food-Safety Priority)
@@ -454,7 +454,7 @@ To reflect this priority, we:
 ![AUC curve](outputs/AUC%20curve.png)
 ---
 
-<img width="2306" height="1238" alt="Rplot55" src="outputs/Predicted_probability_presence_rivers_lakes.png" />
+
 ---
 
 # REFERENCES
