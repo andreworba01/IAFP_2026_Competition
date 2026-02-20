@@ -239,6 +239,34 @@ This supports an **anthropogenic association hypothesis**, where *Listeria* pers
 ### Summary Statement
 
 > *Univariate effect size analysis revealed that Listeria presence was negatively associated with semi-natural land cover (e.g., shrubland), while positively associated with soil moisture and managed land-use types, particularly cropland and pasture. However, substantial overlap in predictor distributions between presence and absence groups indicates that Listeria occurrence is not driven by single-variable thresholds, but rather by multivariate and nonlinear interactions, justifying the use of tree-based ensemble models for predictive modeling.*
+>
+---
+
+## Model Selection (Food-Safety Priority)
+
+We evaluated multiple binary classifiers (LogReg, SVM-RBF, Random Forest, ExtraTrees, HistGradientBoosting, LightGBM, and CatBoost) using an **80/20 train–test split** and **cross-validation** on the training set. Because this is a food-safety screening task, we prioritized **high sensitivity (recall)** to minimize **false negatives** (missed positives).
+
+To reflect this priority, we:
+- Computed **out-of-fold (OOF)** predicted probabilities on the training set for each model.
+- Selected a **model-specific decision threshold** to achieve a target recall (e.g., **≥ 0.90**) based on OOF predictions.
+- Ranked models primarily by **fewest FN**, then **fewest FP**, using **recall** as a tie-breaker.
+- Fine-tuned the best-performing model(s) via hyperparameter search and evaluated final performance on the held-out test set.
+
+### Ranked Model Results (Test Set)
+
+| Model | Threshold | TN | FP | FN | TP | Sensitivity (Recall) | Specificity | Balanced Accuracy | ROC AUC | Avg Precision | Chosen Thr (from OOF) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| LogReg (balanced) | 0.321854 | 42 | 21 | 2 | 60 | 0.967742 | 0.666667 | 0.817204 | 0.890169 | 0.833814 | 0.321854 |
+| SVM-RBF (balanced) | 0.307001 | 41 | 22 | 4 | 58 | 0.935484 | 0.650794 | 0.793139 | 0.906298 | 0.906705 | 0.307001 |
+| HistGB | 0.198421 | 56 | 7 | 5 | 57 | 0.919355 | 0.888889 | 0.904122 | 0.958013 | 0.962916 | 0.198421 |
+| LightGBM (recall-leaning) | 0.261349 | 55 | 8 | 6 | 56 | 0.903226 | 0.873016 | 0.888121 | 0.960573 | 0.960990 | 0.261349 |
+| ExtraTrees (balanced) | 0.469331 | 50 | 13 | 6 | 56 | 0.903226 | 0.793651 | 0.848438 | 0.920123 | 0.931038 | 0.469331 |
+| CatBoost (recall-leaning) | 0.495447 | 58 | 5 | 7 | 55 | 0.887097 | 0.920635 | 0.903866 | 0.965438 | 0.970190 | 0.495447 |
+| RF (balanced) | 0.457408 | 53 | 10 | 8 | 54 | 0.870968 | 0.841270 | 0.856119 | 0.940348 | 0.944795 | 0.457408 |
+
+
+## Results
+![AUC curve](outputs/AUC%20curve.png)
 --- 
 <img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/cc47b825-cea6-486b-a40d-c3033fd27158" />
 
@@ -425,33 +453,7 @@ Based on these findings, we decided to go a step further and use these estimates
 
 We then used these conservative concentration estimates to run a simple model of **transfer of *Listeria* from soil to lettuce via rain splash**.
 <img width="2306" height="1238" alt="Rplot55" src="outputs/Predicted_probability_presence_rivers_lakes.png" />
----
 
-## Model Selection (Food-Safety Priority)
-
-We evaluated multiple binary classifiers (LogReg, SVM-RBF, Random Forest, ExtraTrees, HistGradientBoosting, LightGBM, and CatBoost) using an **80/20 train–test split** and **cross-validation** on the training set. Because this is a food-safety screening task, we prioritized **high sensitivity (recall)** to minimize **false negatives** (missed positives).
-
-To reflect this priority, we:
-- Computed **out-of-fold (OOF)** predicted probabilities on the training set for each model.
-- Selected a **model-specific decision threshold** to achieve a target recall (e.g., **≥ 0.90**) based on OOF predictions.
-- Ranked models primarily by **fewest FN**, then **fewest FP**, using **recall** as a tie-breaker.
-- Fine-tuned the best-performing model(s) via hyperparameter search and evaluated final performance on the held-out test set.
-
-### Ranked Model Results (Test Set)
-
-| Model | Threshold | TN | FP | FN | TP | Sensitivity (Recall) | Specificity | Balanced Accuracy | ROC AUC | Avg Precision | Chosen Thr (from OOF) |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| LogReg (balanced) | 0.321854 | 42 | 21 | 2 | 60 | 0.967742 | 0.666667 | 0.817204 | 0.890169 | 0.833814 | 0.321854 |
-| SVM-RBF (balanced) | 0.307001 | 41 | 22 | 4 | 58 | 0.935484 | 0.650794 | 0.793139 | 0.906298 | 0.906705 | 0.307001 |
-| HistGB | 0.198421 | 56 | 7 | 5 | 57 | 0.919355 | 0.888889 | 0.904122 | 0.958013 | 0.962916 | 0.198421 |
-| LightGBM (recall-leaning) | 0.261349 | 55 | 8 | 6 | 56 | 0.903226 | 0.873016 | 0.888121 | 0.960573 | 0.960990 | 0.261349 |
-| ExtraTrees (balanced) | 0.469331 | 50 | 13 | 6 | 56 | 0.903226 | 0.793651 | 0.848438 | 0.920123 | 0.931038 | 0.469331 |
-| CatBoost (recall-leaning) | 0.495447 | 58 | 5 | 7 | 55 | 0.887097 | 0.920635 | 0.903866 | 0.965438 | 0.970190 | 0.495447 |
-| RF (balanced) | 0.457408 | 53 | 10 | 8 | 54 | 0.870968 | 0.841270 | 0.856119 | 0.940348 | 0.944795 | 0.457408 |
-
-
-## Results
-![AUC curve](outputs/AUC%20curve.png)
 ---
 
 
