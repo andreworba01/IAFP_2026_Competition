@@ -268,12 +268,7 @@ To reflect this priority, we:
 ## Results
 ![AUC curve](outputs/AUC%20curve.png)
 --- 
-<img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/cc47b825-cea6-486b-a40d-c3033fd27158" />
-
-##### **Figure 1. Spatial distribution of Listeria soil samples across the United States.**
-Geographic distribution of soil sampling locations included in the study. Each point represents an individual soil sample, with color indicating Listeria presence (1) or absence (0). State boundaries are shown for reference. Sampling locations are unevenly distributed across the continental United States, reflecting differences in regional sampling intensity.
-
-The spatial distribution suggests that Listeria presence varies geographically, with clusters of positive samples in certain regions. These patterns may reflect regional differences in environmental conditions, land use, agricultural practices, or climate, rather than random occurrence, although uneven sampling density limits causal interpretation.
+### Summary of Spatila distribution of Listeria in soil samples across the United States. 
 
 ---
 <img width="2306" height="1238" alt="Rplot55" src="https://github.com/user-attachments/assets/84f5eba6-67cb-4dc3-bd9b-788cd56e4fd9" />
@@ -452,6 +447,12 @@ The final row of the table reports pooled estimates across all states based on t
 Based on these findings, we decided to go a step further and use these estimates in a risk assessment exercise. To remain intentionally conservative, we used the values in **Table 3** rather than **Table 2**. Table 3 assumes a sample mass of **1 g** instead of **25 g**, which shifts the estimated concentration distribution upward and represents a **worst-case scenario**.
 
 We then used these conservative concentration estimates to run a simple model of **transfer of *Listeria* from soil to lettuce via rain splash**.
+
+
+### Predicted Listeria Risk Hotspots Near Rivers and Lakes
+
+This map shows the model-predicted probability of Listeria presence at sampled sites, overlaid with nearby rivers and lakes. Higher-risk locations (e.g., ≥0.60) stand out as potential hotspots, helping farmers prioritize where to sample, focus water-related controls, and plan harvest timing to reduce contamination risk.
+
 <img width="2306" height="1238" alt="Rplot55" src="outputs/Predicted_probability_presence_rivers_lakes.png" />
 
 ---
