@@ -85,6 +85,8 @@ IAFP_2026_Competition/
 │   └── processed/      # Analysis- and model-ready datasets
 ├── scripts/
 │   ├── 01_univariate_screening.py
+│   ├── 02_ML_Prediction.ipynb
+│   ├── 03_Agresti–Coull.R
 ├── src/
 │   ├── config.py       # Centralized path management
 │   └── __init__.py
@@ -405,7 +407,7 @@ The code for this proccess can be found under
 ```text
 IAFP_2026_Competition/
 ├── scripts/
-│   ├──Agresti–Coull.R
+│   ├──03_Agresti–Coull.R
 ```
 --
 
