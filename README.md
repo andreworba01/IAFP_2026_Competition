@@ -286,6 +286,14 @@ State-level prevalence of Listeria presence estimated from soil samples aggregat
 Variation in state-level prevalence suggests that broader regional factors, including climatic conditions, dominant land use, and agricultural intensity, may influence Listeria occurrence. Nonetheless, differences in sampling effort among states introduce uncertainty, and observed prevalence patterns likely reflect a combination of environmental drivers and data availability.
 
 ---
+## From Presence–Absence Prediction to Quantitative Risk Metrics: Translating Soil Surveillance Data into Food Safety–Relevant Estimates
+
+Using the dataset provided for the IAFP Modeling Competition, we first developed a predictive model to classify the presence and absence of *Listeria* in agricultural soils. While the resulting model demonstrated strong performance metrics, <mark> we sought to extend its practical value for food safety risk assessment.</mark>
+
+Rather than limiting our analysis to binary predictions, we leveraged the available surveillance data to estimate state-level prevalence and translate these estimates into probabilistic concentration metrics (CFU/g) using a probabilistic framework. This additional step allows model outputs to be interpreted in terms of potential exposure and public health relevance.
+
+Although <mark> these estimates are subject to uncertainty—particularly in regions with limited sampling—explicitly modeling</mark> this uncertainty strengthens risk-based decision-making. By moving beyond classification accuracy and incorporating uncertainty-aware concentration estimates, our approach provides more actionable insights for prioritizing interventions, guiding monitoring efforts, and supporting preventive food safety strategies.
+
 **Table 2.** State-level prevalence and concentration estimates of Listeria contamination in lettuce. For each state, the total number of samples (n), number of positives (k), estimated prevalence with 95% confidence intervals, and modeled mean and 95th percentile concentrations (Cs_Li_mean and Cs_Li_q95) are shown.
 
 | State          | n  | Estimated Prevalence (π̂) | pU    | CI (95%)         | Cs_Li_mean (CFU/g) | sim_q95 (CFU/g) |
@@ -335,8 +343,6 @@ Variation in state-level prevalence suggests that broader regional factors, incl
 | **Total**       | 621|  –     | –                      |    –   |   – |–
 | **Average**    |     |0.461	|  0.705      |      –        | 5.609E-02	 |9.628E-02
 
-   |
-
 
 ### Table description (statistical modeling details)
 
@@ -344,12 +350,12 @@ This table presents state-level estimates of *Listeria* prevalence and concentra
 
 #### Prevalence estimation
 
-Prevalence for each state was estimated from the number of positive samples (*k*) out of the total number of samples analyzed (*n*). Uncertainty in prevalence was quantified using the **Agresti–Coull (AC) confidence interval**, defined as follows:
+Prevalence for each state was estimated from the number of positive samples (*w*) out of the total number of samples analyzed (*n*). Uncertainty in prevalence was quantified using the **Agresti–Coull (AC) confidence interval**, defined as follows:
 
 **Adjusted prevalence estimate:**
 
 $$
-\tilde{p} = \frac{k + z^2 / 2}{n + z^2}
+\tilde{p} = \frac{w + z^2 / 2}{n + z^2}
 $$
 
 **95% Agresti–Coull confidence interval:**
