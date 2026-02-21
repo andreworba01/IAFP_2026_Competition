@@ -397,11 +397,13 @@ These metrics together characterize both central tendency and upper-tail behavio
 
 Estimating *Listeria* concentration in soil is challenging. Denis et al. (2022) reported concentrations of up to **6 MPN/g** in soils surrounding a lagoon in France. This value can therefore be considered an approximate **upper limit** that would be difficult to observe in non-agricultural soils, such as those sampled in the study used to derive the concentration estimates reported in Table 2.  
 
-Furthermore, Locatelli et al. (2013) demonstrated that the **limit of detection (LOD)** in dry soil can be as high as **10⁴ CFU/g of dry soil**, which helps explain why relatively few studies are able to quantitatively estimate *Listeria* concentrations in soil matrices. <mark> Therefore, the approximation presented above provides a reasonable basis for risk assessment and modeling.</mark>
+Furthermore, Locatelli et al. (2013) demonstrated that the **limit of detection (LOD)** in dry soil can be as high as **10⁴ CFU/g of dry soil**, which helps explain why relatively few studies are able to quantitatively estimate *Listeria* concentrations in soil matrices. These methodological limitations help explain why relatively few studies report quantitative soil contamination data, despite the recognized importance of soil as a potential contamination source.
 
-#### Pooled estimates
+<mark> In this context, the probabilistic concentration estimates presented in **Table 2** provide a practical and scientifically grounded basis for risk assessment when high-quality quantitative data are unavailable. By integrating prevalence information, sampling uncertainty, and conservative statistical assumptions, this approach enables translation of presence–absence data into exposure-relevant metrics. Such estimates support downstream risk modeling, comparative risk ranking, and prioritization of preventive interventions, even under data-limited conditions.</mark>
 
-The final row of the table reports pooled estimates across all states based on the aggregated dataset.
+The code for this proccess can be found under 
+├── scripts/
+│   ├──Agresti–Coull.R
 
 --
 
