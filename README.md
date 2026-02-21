@@ -449,7 +449,7 @@ IAFP_2026_Competition/
 
 To enhance model interpretability and support biologically meaningful inference, we evaluated predictor importance using SHAP (SHapley Additive exPlanations) values and compared these results with independent univariate effect size analysis based on Cliff’s Delta (refer above).
 
-<img width="793" height="940" alt="image" src="https://github.com/user-attachments/assets/14799ec2-f483-423c-8430-748f7e610a72" />
+<img width="821" height="940" alt="image" src="https://github.com/user-attachments/assets/2daa327e-fb7a-4c3a-88dd-cb712fafd58d" />
 
 ### SHAP-Based Global Feature Importance
 
