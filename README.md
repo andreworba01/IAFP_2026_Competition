@@ -492,6 +492,30 @@ This map shows the model-predicted probability of Listeria presence at sampled s
 
 <img width="2306" height="1238" alt="Rplot55" src="outputs/Predicted_probability_presence_rivers_lakes.png" />
 
+## Main Spatial Trends in Predicted *Listeria* Risk
+
+The spatial distribution of predicted *Listeria* presence reveals several consistent geographic and environmental patterns when evaluated in conjunction with hydrological features.
+
+First, high-probability locations (≥ 0.60) form spatial clusters, particularly in the Midwest, Upper Midwest, and parts of the Southeast. These regions are characterized by intensive agricultural activity, dense surface water networks, and favorable climatic conditions for bacterial persistence.
+
+Second, many predicted hotspots are located near major rivers, floodplains, and lake systems, including the Mississippi River Basin, the Ohio River Valley, and the Great Lakes region. Surface waters are known to act as reservoirs and transport pathways for *Listeria*, facilitating dissemination across agricultural landscapes, particularly following rainfall and flooding events (Chapin et al., 2014; Weller et al., 2016; Gorski et al., 2022).
+
+Third, comparatively lower predicted probabilities are observed across much of the arid and semi-arid western United States. Reduced soil moisture, limited surface water connectivity, and higher temperature variability in these regions likely constrain long-term bacterial survival. Previous studies have shown that low moisture availability and high solar exposure reduce *Listeria* persistence in environmental matrices (NicAogáin et al., 2018; Osek et al., 2022).
+
+Fourth, localized hotspots are evident in southern and coastal regions, where elevated humidity, frequent precipitation, and intensive land use may contribute to increased environmental suitability. Moisture and temperature have been repeatedly identified as key drivers of *Listeria* survival and growth in soil environments (Locatelli et al., 2013A).
+
+Finally, the spatial gradients observed across longitude and latitude are consistent with the importance of large-scale environmental drivers identified in the SHAP analysis. This agreement between spatial visualization and statistical interpretation reinforces the ecological plausibility of the model predictions and aligns with prior work linking regional climate and land use patterns to contamination risk.
+
+Taken together, these trends **suggest** that *Listeria* risk in soil is strongly structured by hydrology, climate, and land management practices. Integrating spatial predictions with environmental context enables identification of priority surveillance areas and supports targeted, risk-based management strategies for fresh produce safety.
+
+## Why This Map Matters for Food Safety
+
+This spatial risk map transforms predictive model outputs into actionable food safety insight. Rather than treating *Listeria* presence as random, it identifies geographic patterns linked to environmental conditions, hydrology, and land use.
+
+By highlighting areas consistently associated with elevated risk, the map supports targeted surveillance, smarter resource allocation, and proactive mitigation strategies. This approach aligns with preventive food safety principles by enabling risk-based decision-making before contamination reaches the food supply.
+
+In short, the map shifts environmental monitoring from reactive detection to strategic prevention.
+
 ---
 
 
@@ -500,10 +524,22 @@ This map shows the model-predicted probability of Listeria presence at sampled s
 # REFERENCES
 Bilder, C. R., & Loughin, T. M. (2014). Analysis of Categorical Data with R (p. 55).Chapman & Hall/CRC Texts in Statistical Science. CRC Press. Kindle Edition.
 
+Chapin, T. K., Nightingale, K. K., Worobo, R. W., Wiedmann, M., & Strawn, L. K. (2014). Geographical and Meteorological Factors Associated with Isolation of Listeria Species in New York State Produce Production and Natural Environments. Journal of Food Protection, 77(11), 1919-1928. https://doi.org/10.4315/0362-028X.JFP-14-132
+
 Denis, M., Ziebal, C., Boscher, E., Picard, S., Perrot, M., Nova, M. V., Roussel, S., Diara, A., & Pourcher, A. M. (2022). Occurrence and diversity of *Listeria monocytogenes* isolated from two pig manure treatment plants in France. *Microbes and Environments, 37*(4), ME22019. https://doi.org/10.1264/jsme2.ME22019  
+
+Gorski, L., Cooley, M. B., Oryang, D., Carychao, D., Nguyen, K., Luo, Y., Weinstein, L., Brown, E., Allard, M., Mandrell, R. E., & Chen, Y. (2022). Prevalence and Clonal Diversity of over 1,200 Listeria monocytogenes Isolates Collected from Public Access Waters near Produce Production Areas on the Central California Coast during 2011 to 2016. Applied and Environmental Microbiology, 88(8), e00357-22. https://doi.org/10.1128/aem.00357-22
 
 Locatelli, A., Depret, G., Jolivet, C., Henry, S., Dequiedt, S., Piveteau, P., & Hartmann, A. (2013). Nation-wide study of the occurrence of *Listeria monocytogenes* in French soils using culture-based and molecular detection methods. *Journal of Microbiological Methods, 93*(3), 242–250. https://doi.org/10.1016/j.mimet.2013.03.017
 
+Locatelli, A., Spor, A., Jolivet, C., Piveteau, P., & Hartmann, A. (2013A). Biotic and Abiotic Soil Properties Influence Survival of Listeria monocytogenes in Soil. PLOS ONE, 8(10), e75969. https://doi.org/10.1371/journal.pone.0075969
+
+NicAogáin, K., Magill, D., Conneely, A., & Bennett, C. (2018). Solar irradiance limits the long‐term survival of Listeria monocytogenes in seawater. Letters in Applied Microbiology, 66(3), 169-174. https://doi.org/10.1111/lam.12831
+
 Open-Meteo. (2024). Open-Meteo Archive API: Historical weather data. https://archive-api.open-meteo.com
+
+Osek, J., Lachtara, B., & Wieczorek, K. (2022). Listeria monocytogenes – How This Pathogen Survives in Food-Production Environments? Frontiers in Microbiology, 13, 866462. https://doi.org/10.3389/fmicb.2022.866462 
+
+Weller, D., Shiwakoti, S., Bergholz, P., Grohn, Y., Wiedmann, M., & Strawn, L. K. (2016). Validation of a Previously Developed Geospatial Model That Predicts the Prevalence of Listeria monocytogenes in New York State Produce Fields. Applied and Environmental Microbiology, 82(3), 797. https://doi.org/10.1128/AEM.03088-15
 
 
