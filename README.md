@@ -350,7 +350,11 @@ This table presents state-level estimates of *Listeria* prevalence and concentra
 
 #### Prevalence estimation
 
-Prevalence for each state was estimated from the number of positive samples (*w*) out of the total number of samples analyzed (*n*). Uncertainty in prevalence was quantified using the **Agresti–Coull (AC) confidence interval**, defined as follows:
+Prevalence for each state was estimated from the number of positive samples (*w*) out of the total number of samples analyzed (*n*). Uncertainty in prevalence was quantified using the **Agresti–Coull (AC) confidence interval**. The AC method was selected based on empirical coverage evaluation. Using `binom.coverage()`, we calculated the true confidence level achieved by each method at the nominal 95% level across states. The Agresti–Coull interval demonstrated consistent and reliable performance, with observed coverage ranging from 0.951 to 1.000 (median = 0.983). Importantly, coverage never fell below the nominal 95% level, even in states with small sample sizes.
+
+In contrast to purely asymptotic methods, which can under-cover when n is small or prevalence is near 0 or 1, the Agresti–Coull approach provides stable and slightly conservative intervals. For a food safety application—where underestimation of uncertainty may lead to overconfident risk interpretation—a conservative interval is preferable.
+
+Therefore, the Agresti–Coull method was selected to ensure robust uncertainty quantification while maintaining appropriate statistical coverage across heterogeneous sampling intensities.
 
 **Adjusted prevalence estimate:**
 
