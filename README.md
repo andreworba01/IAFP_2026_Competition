@@ -517,7 +517,160 @@ By highlighting areas consistently associated with elevated risk, the map suppor
 In short, the map shifts environmental monitoring from reactive detection to strategic prevention.
 
 ---
+## Statistically Significant Predictors of *Listeria* Presence (logistic regression and odds ratio)
+*(Type II Likelihood Ratio Tests, p < 0.05)*
 
+Multivariable logistic regression analysis identified several spatial, climatic, and temporal variables that were significantly associated with *Listeria* presence after adjustment for other predictors.
+
+---
+
+### Spatial and Geographic Factors
+
+| Variable   | p-value        | Interpretation                              |
+|------------|---------------|----------------------------------------------|
+| longitude  | < 0.001 ***    | Strong east–west spatial gradient            |
+| elevation_m| < 0.001 ***    | Elevation influences risk                   |
+| latitude   | 0.054 (.)      | Borderline north–south gradient (marginal evidence)            |
+
+These results indicate strong spatial structure in *Listeria* occurrence, consistent with SHAP-based feature importance and hotspot mapping.
+
+---
+
+### Temperature Variables
+
+| Variable   | p-value     |
+|------------|-------------|
+| temp_mean  | 0.006 **     |
+| temp_min   | 0.048 * (marginal evidence)      |
+| temp_max   | 0.006 **     |
+
+All temperature metrics were significantly associated with *Listeria* presence, highlighting the importance of thermal conditions.
+
+This supports the biological expectation that *Listeria* survival and growth depend on environmental temperature regimes.
+
+---
+
+### Humidity Variables
+
+| Variable | p-value      |
+|----------|--------------|
+| rh_mean  | 0.001 **      |
+| rh_min   | < 0.001 ***   |
+| rh_max   | 0.004 **      |
+
+Relative humidity showed a strong and consistent effect across all metrics.
+
+These findings align with:
+- SHAP feature importance rankings,
+- Ecological literature,
+- Observed spatial hotspot patterns.
+
+Overall, humidity emerged as a major environmental driver of contamination risk.
+
+---
+
+### 🌧️ Precipitation Variables
+
+| Variable       | p-value      |
+|----------------|--------------|
+| ppt_sum_mm     | < 0.001 ***   |
+| ppt_hours_gt0  | 0.001 **      |
+
+➡️ Both rainfall intensity and duration were significant predictors.
+
+This supports the hypothesis of water-mediated transport and redistribution of *Listeria* in agricultural environments.
+
+---
+
+### 🌬️ Wind Variables
+
+| Variable  | p-value      |
+|-----------|--------------|
+| wind_mean | 0.005 **      |
+| wind_max  | < 0.001 ***   |
+| wind_min  | Not significant |
+
+➡️ Strong and extreme wind conditions were associated with increased risk, whereas minimum wind speeds were not.
+
+These effects may be related to:
+- Soil disturbance,
+- Aerosolization of particles,
+- Surface drying and redistribution processes.
+
+---
+
+### 📅 Temporal Effects
+
+| Variable       | p-value   |
+|----------------|-----------|
+| sampling_date  | 0.008 **  |
+
+➡️ Sampling date was a significant predictor, indicating seasonal and temporal structure in *Listeria* detection.
+
+This finding highlights the importance of timing in environmental surveillance and risk management.
+
+---
+
+## Odds Ratio Analysis of Environmental and Spatial Predictors
+
+Odds ratios (ORs) were estimated from the multivariable logistic regression model to quantify the magnitude and direction of associations between predictors and *Listeria* presence.
+
+OR > 1 indicates increased odds of detection, while OR < 1 indicates decreased odds.
+
+---
+
+### 📌 Statistically Significant Predictors (p < 0.05)
+
+| Variable       | OR (per unit) | OR (Scaled) | 95% CI        | p-value   | Interpretation |
+|----------------|--------------|------------|--------------|-----------|----------------|
+| sampling_date  | 0.995        | 0.956      | [0.923, …]   | 0.009 **  | Slight seasonal decline |
+| longitude      | 1.04         | 1.52       | [1.25, …]    | <0.001 ***| Strong east–west gradient |
+| elevation_m    | 0.999        | 0.989      | [0.983, …]   | <0.001 ***| Higher elevation lowers risk |
+| temp_mean      | 0.58         | 0.004      | [0.000, …]   | 0.006 **  | Higher mean temp reduces risk |
+| temp_min       | 1.24         | 8.62       | [1.02, …]    | 0.050 *   | Warmer nights increase risk |
+| temp_max       | 1.35         | 19.8       | [2.36, …]    | 0.006 **  | Hot extremes increase risk |
+| rh_mean        | 0.88         | 0.28       | [0.13, …]    | 0.001 **  | Moderate humidity protective |
+| rh_min         | 1.11         | 2.78       | [1.71, …]    | <0.001 ***| Dry periods increase risk |
+| rh_max         | 1.07         | 1.98       | [1.24, …]    | 0.004 **  | High humidity increases risk |
+| ppt_sum_mm     | 1.12         | 3.13       | [1.64, …]    | <0.001 ***| Heavy rainfall increases risk |
+| ppt_hours_gt0  | 0.89         | 0.31       | [0.15, …]    | 0.002 **  | Long wet periods protective |
+| wind_mean      | 1.27         | 10.5       | [1.99, …]    | 0.006 **  | Wind-driven dispersion |
+| wind_max       | 0.85         | 0.21       | [0.08, …]    | 0.001 **  | Strong gusts reduce persistence |
+
+---
+
+### 🌱 Land Cover Variables
+
+All land-cover variables (forest, cropland, pasture, wetland, shrubland, etc.) showed infinite OR estimates and non-significant p-values.
+
+This suggests quasi-separation and high collinearity among land-use categories, limiting their independent interpretability in the multivariable model.
+
+---
+
+### Summary of Effect Patterns
+
+Overall, *Listeria* presence was most strongly associated with:
+
+- Geographic gradients (longitude, elevation),
+- Temperature extremes (min/max),
+- Humidity variability,
+- Rainfall intensity,
+- Wind exposure,
+- Seasonal timing.
+
+These results indicate that *Listeria* risk is driven primarily by dynamic environmental processes rather than static land-cover features.
+
+---
+### Summary
+
+Overall, *Listeria* presence was primarily associated with:
+
+- Geographic location (longitude, elevation),
+- Climatic conditions (temperature, humidity),
+- Hydrological factors (precipitation),
+- Seasonal timing (sampling date).
+
+These results reinforce the importance of integrating environmental and spatial context into microbial risk prediction models.
 
 ---
 
