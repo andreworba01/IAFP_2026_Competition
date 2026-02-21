@@ -332,8 +332,8 @@ Variation in state-level prevalence suggests that broader regional factors, incl
 | Idaho           | 12 | 0.000 | 0.282 | [0.000, 0.282] | 1.408E-02 | 2.739E-02 |
 | Nevada          | 3  | 0.000 | 0.617 | [0.000, 0.617] | 4.338E-02 | 9.284E-02 |
 | New Jersey      | 3  | 0.000 | 0.617 | [0.000, 0.617] | 4.331E-02 | 9.303E-02 |
-| **Total**       | 621|0.4992     | –                   | 0.061      | 0.069     |
-| **Average**    |     |     |            |              | 5.609E-02	 |9.628E-02
+| **Total**       | 621|  –     | –                      |    –   |   – |–
+| **Average**    |     |0.499  |      –      |      –        | 5.609E-02	 |9.628E-02
 
    |
 
