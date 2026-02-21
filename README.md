@@ -403,13 +403,88 @@ Furthermore, Locatelli et al. (2013) demonstrated that the **limit of detection 
 
 <mark> In this context, the probabilistic concentration estimates presented in **Table 2** provide a practical and scientifically grounded basis for risk assessment when high-quality quantitative data are unavailable. By integrating prevalence information, sampling uncertainty, and conservative statistical assumptions, this approach enables translation of presence–absence data into exposure-relevant metrics. Such estimates support downstream risk modeling, comparative risk ranking, and prioritization of preventive interventions, even under data-limited conditions.</mark>
 
-The code for this proccess can be found under 
+The code for this process can be found under 
 ```text
 IAFP_2026_Competition/
 ├── scripts/
 │   ├──03_Agresti–Coull.R
 ```
 ---
+## Integrating Weather Data to Enhance Environmental Risk Modeling
+
+To extend the predictive framework beyond the provided dataset, we returned to the original publication and downloaded the full raw dataset. The competition-ready dataset had been pre-cleaned by removing rows with missing values, which resulted in a more balanced class distribution.
+
+While this approach simplifies modeling, real-world environmental surveillance data are typically imbalanced, with many more negative than positive samples. To better reflect realistic food safety conditions, we rebuilt the preprocessing pipeline from scratch.
+
+Instead of deleting observations, we retained all sampling locations and removed only columns with missing values. This decision preserved the natural class imbalance and spatial heterogeneity of the dataset, <mark> creating a more challenging and ecologically valid modeling scenario </mark>. By doing so, we ensured that model performance and spatial predictions more closely represent the conditions encountered in real environmental monitoring.
+
+
+### Weather Data Integration
+
+To better capture environmental drivers of *Listeria* persistence, we enriched the dataset with historical weather variables obtained from the Open-Meteo Archive API. For each sampling location and date, we pulled hourly meteorological data and summarized them into daily features.
+
+Historical weather data were retrieved from the Open-Meteo Archive API (Open-Meteo, 2024), which provides free access to global hourly reanalysis data. The API was queried using geographic coordinates and sampling dates to extract temperature, relative humidity, precipitation, and wind speed variables.
+
+The following variables were selected based on strong historical availability and biological relevance:
+
+- **Air temperature (2 m)**
+- **Relative humidity (2 m)**
+- **Precipitation**
+- **Wind speed (10 m)**
+
+These factors are mechanistically linked to *Listeria* survival and transport in soil environments. For example, precipitation and humidity influence moisture conditions, while temperature affects bacterial growth and persistence. Wind may contribute to environmental redistribution.
+
+### Modeling with Enriched Environmental Features
+
+After merging the weather data with the cleaned sampling dataset, we trained an updated predictive model incorporating both spatial and environmental variables.<mark> In this stage, the primary objective was not to replicate or maximize the predictive performance achieved in the earlier, more balanced dataset. Instead, the goal was to evaluate model behavior under more realistic, complex conditions characterized by class imbalance (693 negative samples vs. 311 positive samples), which more closely reflect real-world environmental surveillance data </mark>.
+
+A Light Gradient Boosting Machine (LightGBM) classifier was implemented with hyperparameters selected to balance predictive capacity and interpretability. In particular, class weighting and sample rebalancing strategies were applied to emphasize positive detections and mitigate the effects of imbalance.
+
+```text
+IAFP_2026_Competition/
+├── scripts/
+│   ├──04_Listeria_soil_imbalanced.py
+```
+## Interpreting Environmental Drivers Using SHAP and Effect Size Analysis
+
+To enhance model interpretability and support biologically meaningful inference, we evaluated predictor importance using SHAP (SHapley Additive exPlanations) values and compared these results with independent univariate effect size analysis based on Cliff’s Delta (refer above).
+
+<img width="793" height="940" alt="image" src="https://github.com/user-attachments/assets/14799ec2-f483-423c-8430-748f7e610a72" />
+
+### SHAP-Based Global Feature Importance
+
+Global SHAP analysis revealed that spatial and environmental variables were the primary drivers of model predictions. Longitude emerged as the most influential feature, reflecting large-scale regional gradients in environmental conditions and land use. Moisture and temperature-related variables (mean, minimum, and maximum temperature; relative humidity) also contributed substantially, highlighting the importance of microclimatic conditions in *Listeria* persistence.
+
+Land cover variables, particularly shrubland, cropland, and pasture percentages, further influenced predictions, suggesting that vegetation structure and agricultural activity modulate soil contamination risk. Elevation also contributed to model outputs, potentially reflecting indirect effects through drainage patterns, temperature gradients, and soil characteristics.
+
+Importantly, proximity to open water and wetland coverage exhibited measurable effects, supporting the hypothesis that hydrological connectivity plays a role in environmental dissemination and persistence of *Listeria*.
+
+### Comparison with Univariate Effect Size Analysis
+
+Independent univariate analysis using Cliff’s Delta identified several variables with strong discriminatory power between presence and absence samples. Shrubland percentage exhibited the largest negative effect size (Δ = −0.44), indicating lower shrubland coverage in positive samples. In contrast, moisture (Δ = +0.42), cropland (Δ = +0.39), longitude (Δ = +0.38), and pasture (Δ = +0.31) showed positive associations with *Listeria* presence.
+
+The concordance between SHAP and Cliff’s Delta results provides robust validation of key predictors. Variables identified as important in SHAP analysis were consistently associated with meaningful distributional differences in univariate comparisons. This agreement suggests that model predictions are driven by genuine environmental signals rather than spurious correlations.
+
+### Integrative Interpretation for Food Safety Risk Assessment
+
+While SHAP values quantify each variable’s contribution within a multivariate predictive framework, Cliff’s Delta measures marginal effects in isolation. The combined use of these approaches enables both mechanistic interpretation and statistical validation.
+
+For example, moisture and land use variables exhibit strong effects in both analyses, reinforcing their relevance as drivers of environmental suitability for *Listeria*. Spatial variables, particularly longitude, capture regional heterogeneity that may reflect differences in climate, agricultural practices, and hydrological networks.
+
+This integrative interpretability framework strengthens confidence in model outputs and supports translation of predictive results into actionable food safety insights. By identifying environmental conditions consistently associated with elevated risk, this approach informs targeted surveillance, land management strategies, and preventive interventions.
+
+Rather than relying solely on performance metrics, this dual interpretability strategy enables evaluation of ecological plausibility and public health relevance, which are critical for environmental pathogen risk assessment.
+
+---
+
+### Spatial Risk Visualization
+
+To further contextualize predictions geographically, we plotted model-estimated probabilities of *Listeria* presence across the United States. High-probability locations (≥ 0.60) were highlighted to identify potential environmental “hotspots.”
+
+In addition, hydrological features (major rivers and water bodies) were overlaid on the map. This integration provides ecological context, as proximity to surface water may represent increased contamination or transport risk.
+
+By combining predictive modeling, environmental enrichment, and hydrological context, this analysis moves beyond classification and toward actionable environmental risk identification.
+
 
 ### Predicted Listeria Risk Hotspots Near Rivers and Lakes
 
@@ -428,4 +503,7 @@ Bilder, C. R., & Loughin, T. M. (2014). Analysis of Categorical Data with R (p. 
 Denis, M., Ziebal, C., Boscher, E., Picard, S., Perrot, M., Nova, M. V., Roussel, S., Diara, A., & Pourcher, A. M. (2022). Occurrence and diversity of *Listeria monocytogenes* isolated from two pig manure treatment plants in France. *Microbes and Environments, 37*(4), ME22019. https://doi.org/10.1264/jsme2.ME22019  
 
 Locatelli, A., Depret, G., Jolivet, C., Henry, S., Dequiedt, S., Piveteau, P., & Hartmann, A. (2013). Nation-wide study of the occurrence of *Listeria monocytogenes* in French soils using culture-based and molecular detection methods. *Journal of Microbiological Methods, 93*(3), 242–250. https://doi.org/10.1016/j.mimet.2013.03.017
+
+Open-Meteo. (2024). Open-Meteo Archive API: Historical weather data. https://archive-api.open-meteo.com
+
 
