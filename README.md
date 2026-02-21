@@ -402,9 +402,11 @@ Furthermore, Locatelli et al. (2013) demonstrated that the **limit of detection 
 <mark> In this context, the probabilistic concentration estimates presented in **Table 2** provide a practical and scientifically grounded basis for risk assessment when high-quality quantitative data are unavailable. By integrating prevalence information, sampling uncertainty, and conservative statistical assumptions, this approach enables translation of presence–absence data into exposure-relevant metrics. Such estimates support downstream risk modeling, comparative risk ranking, and prioritization of preventive interventions, even under data-limited conditions.</mark>
 
 The code for this proccess can be found under 
+```text
+IAFP_2026_Competition/
 ├── scripts/
 │   ├──Agresti–Coull.R
-
+```
 --
 
 
