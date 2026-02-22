@@ -160,11 +160,17 @@ This work is submitted to the IAFP AI Benchmarking Student Competition on Predic
 
 ---
 ## Table of Contents
-- [Overview](#overview)
-- [Data Sources](#data-sources)
-- [Modeling Framework](#modeling-framework)
-- [Results](#results)
-- [Food Safety Implications](#food-safety-implications)
+
+- [Installation](#️-installation)
+- [Getting Started](#getting-started)
+- [Exploratory Analysis and Preprocessing Results](#exploratory-analysis-and-preprocessing-results)
+  - [Label Distribution](#label-distribution)
+  - [Correlation Structure of Predictors](#correlation-structure-of-predictors)
+  - [Univariate Effect Size Analysis](#univariate-effect-size-analysis-cliffs-delta)
+  - [Land-use Composition](#land-use-composition-by-listeria-presence)
+  - [Biological Interpretation](#biological-interpretation)
+- [From Presence–Absence to Risk Metrics](#from-presenceabsence-prediction-to-quantitative-risk-metrics-translating-soil-surveillance-data-into-food-safetyrelevant-estimates)
+
 
 ---
 ## Exploratory Analysis and Preprocessing Results
