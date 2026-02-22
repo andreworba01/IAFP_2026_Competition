@@ -87,7 +87,7 @@ IAFP_2026_Competition/
 │   ├── 01_univariate_screening.py
 │   ├── 02_ML_Prediction.ipynb
 │   ├── 03_Agresti–Coull.R
-│   ├── logistic_regression_odds.R
+│   ├── 04_logistic_regression_odds.R
 ├── src/
 │   ├── config.py       # Centralized path management
 │   └── __init__.py
