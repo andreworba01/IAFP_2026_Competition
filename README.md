@@ -87,6 +87,7 @@ IAFP_2026_Competition/
 │   ├── 01_univariate_screening.py
 │   ├── 02_ML_Prediction.ipynb
 │   ├── 03_Agresti–Coull.R
+│   ├── logistic_regression_odds.R
 ├── src/
 │   ├── config.py       # Centralized path management
 │   └── __init__.py
@@ -155,6 +156,14 @@ This work is submitted to the IAFP AI Benchmarking Student Competition on Predic
 
 📄 Written report deadline: March 1, 2026
 📍 Finalists presentation: IAFP 2026 Annual Meeting (New Orleans, LA)
+
+---
+## Table of Contents
+- [Overview](#overview)
+- [Data Sources](#data-sources)
+- [Modeling Framework](#modeling-framework)
+- [Results](#results)
+- [Food Safety Implications](#food-safety-implications)
 
 ---
 ## Exploratory Analysis and Preprocessing Results
@@ -569,20 +578,20 @@ Overall, humidity emerged as a major environmental driver of contamination risk.
 
 ---
 
-### 🌧️ Precipitation Variables
+### Precipitation Variables
 
 | Variable       | p-value      |
 |----------------|--------------|
 | ppt_sum_mm     | < 0.001 ***   |
 | ppt_hours_gt0  | 0.001 **      |
 
-➡️ Both rainfall intensity and duration were significant predictors.
+ Both rainfall intensity and duration were significant predictors.
 
 This supports the hypothesis of water-mediated transport and redistribution of *Listeria* in agricultural environments.
 
 ---
 
-### 🌬️ Wind Variables
+### Wind Variables
 
 | Variable  | p-value      |
 |-----------|--------------|
@@ -590,7 +599,7 @@ This supports the hypothesis of water-mediated transport and redistribution of *
 | wind_max  | < 0.001 ***   |
 | wind_min  | Not significant |
 
-➡️ Strong and extreme wind conditions were associated with increased risk, whereas minimum wind speeds were not.
+Strong and extreme wind conditions were associated with increased risk, whereas minimum wind speeds were not.
 
 These effects may be related to:
 - Soil disturbance,
@@ -599,13 +608,13 @@ These effects may be related to:
 
 ---
 
-### 📅 Temporal Effects
+### Temporal Effects
 
 | Variable       | p-value   |
 |----------------|-----------|
 | sampling_date  | 0.008 **  |
 
-➡️ Sampling date was a significant predictor, indicating seasonal and temporal structure in *Listeria* detection.
+Sampling date was a significant predictor, indicating seasonal and temporal structure in *Listeria* detection.
 
 This finding highlights the importance of timing in environmental surveillance and risk management.
 
@@ -619,7 +628,7 @@ OR > 1 indicates increased odds of detection, while OR < 1 indicates decreased o
 
 ---
 
-### 📌 Statistically Significant Predictors (p < 0.05)
+### Statistically Significant Predictors (p < 0.05)
 
 | Variable       | OR (per unit) | OR (Scaled) | 95% CI        | p-value   | Interpretation |
 |----------------|--------------|------------|--------------|-----------|----------------|
@@ -639,13 +648,11 @@ OR > 1 indicates increased odds of detection, while OR < 1 indicates decreased o
 
 ---
 
-### 🌱 Land Cover Variables
+### Land Cover Variables
 
 All land-cover variables (forest, cropland, pasture, wetland, shrubland, etc.) showed infinite OR estimates and non-significant p-values.
 
 This suggests quasi-separation and high collinearity among land-use categories, limiting their independent interpretability in the multivariable model.
-
----
 
 ### Summary of Effect Patterns
 
@@ -660,17 +667,163 @@ Overall, *Listeria* presence was most strongly associated with:
 
 These results indicate that *Listeria* risk is driven primarily by dynamic environmental processes rather than static land-cover features.
 
+
 ---
-### Summary
+## Reduced Logistic Regression Model: Results and Diagnostics
 
-Overall, *Listeria* presence was primarily associated with:
+A reduced logistic regression model was fitted using the most influential spatial and environmental predictors identified through SHAP analysis, odds ratio estimation, and likelihood ratio testing.
 
-- Geographic location (longitude, elevation),
-- Climatic conditions (temperature, humidity),
-- Hydrological factors (precipitation),
+The final reduced model included longitude, elevation, temperature (mean and maximum), maximum relative humidity, and sampling date.
+
+---
+
+### Model Coefficients
+
+All retained predictors were statistically significant (p < 0.05):
+
+| Variable       | Estimate | p-value        | Interpretation |
+|----------------|----------|----------------|----------------|
+| longitude      | +0.043   | < 0.001 ***    | Strong east–west gradient |
+| elevation_m    | −0.001   | < 0.001 ***    | Higher elevation reduces risk |
+| temp_mean      | −0.174   | 0.002 **       | Higher average temperature lowers risk |
+| temp_max       | +0.162   | 0.003 **       | Temperature extremes increase risk |
+| rh_max         | +0.024   | 0.001 **       | High humidity increases risk |
+| sampling_date  | −0.003   | 0.021 *        | Seasonal decline in risk |
+
+These results indicate that *Listeria* presence is primarily driven by spatial gradients, thermal conditions, moisture availability, and temporal dynamics.
+
+---
+
+### Likelihood Ratio Tests (Type II)
+
+Type II likelihood ratio tests confirmed that all retained variables remained independently significant after adjustment:
+
+| Variable       | LR χ²  | p-value        |
+|----------------|--------|----------------|
+| longitude      | 42.86  | < 0.001 ***    |
+| elevation_m    | 34.66  | < 0.001 ***    |
+| temp_mean      | 9.17   | 0.002 **       |
+| temp_max       | 8.94   | 0.003 **       |
+| rh_max         | 11.45  | < 0.001 ***    |
+| sampling_date  | 5.44   | 0.020 *        |
+
+This confirms that each retained predictor contributes uniquely to explaining *Listeria* presence.
+
+---
+
+### Model Fit Comparison
+
+The reduced model was compared with the full model using AIC and likelihood ratio testing.
+
+| Model        | Degrees of Freedom | AIC     |
+|--------------|--------------------|---------|
+| Full model   | 27                 | 904.1   |
+| Reduced model| 7                  | 1029.3  |
+
+The full model achieved substantially lower AIC, indicating better overall fit.
+
+Likelihood ratio testing showed that removing predictors led to a significant loss of explanatory power:
+
+χ²(20) = 165.2, p < 0.001
+
+Therefore, the reduced model trades predictive performance for improved interpretability and stability.
+
+---
+
+### Multicollinearity Assessment
+
+Variance Inflation Factor (VIF) analysis showed:
+
+- Low collinearity for spatial, humidity, and temporal variables (VIF < 2)
+- Severe collinearity between temperature variables
+
+| Variable   | VIF  | Interpretation |
+|------------|------|----------------|
+| longitude  | 1.49 | Low correlation |
+| elevation  | 1.38 | Low correlation |
+| rh_max     | 1.10 | Low correlation |
+| sampling_date | 1.29 | Low correlation |
+| temp_mean  | 41.6 | Severe collinearity |
+| temp_max   | 41.6 | Severe collinearity |
+
+High collinearity between temp_mean and temp_max indicates strong redundancy, reflecting shared thermal information.
+
+---
+
+### Interpretation and Implications
+
+The reduced model identifies a parsimonious set of core drivers of *Listeria* presence:
+
+- Geographic structure (longitude, elevation),
+- Thermal regime (mean and extreme temperatures),
+- Moisture availability (maximum relative humidity),
 - Seasonal timing (sampling date).
 
-These results reinforce the importance of integrating environmental and spatial context into microbial risk prediction models.
+Although the full model achieved superior statistical fit, the reduced model provides more stable and interpretable effect estimates and avoids overparameterization.
+
+This simplified model highlights the dominant environmental mechanisms governing contamination risk and complements machine learning and spatial analyses by offering transparent, inference-based insights.
+
+---
+
+### Summary
+
+- All retained predictors are statistically significant.
+- The reduced model shows minimal multicollinearity except among temperature variables.
+- Some loss of fit is observed relative to the full model.
+- Interpretability and ecological plausibility are substantially improved.
+
+Together, these results support the use of reduced models for explanatory purposes and full models for prediction-focused applications.
+
+---
+# Integrated Modeling Summary and Food Safety Implications
+
+This study combined prevalence estimation, Poisson simulation, machine learning, spatial analysis, and logistic regression to characterize environmental drivers of *Listeria* presence in soil under real-world data limitations.
+
+Using the dataset provided for the IAFP modeling competition, we first estimated state-level prevalence and uncertainty. Because direct concentration measurements in soil are rare and often limited by high detection thresholds, we applied a conservative framework to translate prevalence uncertainty into probabilistic concentration estimates. This approach enables quantitative exposure assessment even when high-resolution microbiological data are unavailable.
+
+To further improve ecological realism, we reconstructed the full raw dataset and integrated historical weather data using the Open-Meteo archive. Rather than enforcing artificial balance through row deletion, we retained data imbalance to reflect operational surveillance conditions. This allowed model development under constraints similar to those faced by regulatory agencies and industry.
+
+A LightGBM classifier was trained on the enriched dataset, incorporating spatial, land-use, and meteorological variables. Model interpretation using SHAP values demonstrated that humidity, precipitation, temperature, and geographic gradients consistently influenced contamination risk. These patterns aligned closely with independent univariate effect size analysis, supporting their robustness.
+
+Spatial risk mapping further revealed clustering near water bodies and in regions with high moisture availability, highlighting potential environmental reservoirs and transport pathways. These visual outputs provide actionable tools for prioritizing monitoring and mitigation efforts.
+
+Complementary logistic regression modeling confirmed these findings through statistical inference. Longitude, elevation, humidity, temperature, and seasonal timing remained significant predictors. 
+
+---
+
+# Food Safety Significance
+
+Together, these analyses demonstrate that *Listeria* contamination in soil is not randomly distributed, but structured by interacting climatic, geographic, and temporal factors.
+
+Key implications for food safety include:
+
+- Moisture and precipitation strongly increase environmental persistence and dissemination risk.
+- Spatial gradients reflect regional vulnerability that can inform targeted surveillance.
+- Seasonal effects indicate predictable periods of elevated risk.
+- Water-associated landscapes represent priority areas for intervention.
+
+Importantly, this framework shows how meaningful risk estimates can be generated even when direct microbial measurements are sparse, censored, or uncertain. By integrating uncertainty, environmental context, and predictive modeling, this approach supports proactive risk management rather than reactive response.
+
+---
+
+# Practical Impact
+
+This modeling strategy enables:
+
+- Risk-based prioritization of sampling locations,
+- Early-warning identification of high-risk regions,
+- More efficient allocation of inspection resources,
+- Improved farm-to-fork contamination prevention.
+
+By leveraging existing surveillance data and publicly available environmental information, this framework provides a scalable and transparent tool for enhancing microbial food safety monitoring under real-world constraints.
+
+---
+
+# Conclusion
+
+Our results highlight moisture availability, geography, and seasonality as central drivers of *Listeria* contamination in soil. The combined use of statistical inference, machine learning, and spatial analysis offers a comprehensive foundation for evidence-based food safety decision-making.
+
+This integrated approach demonstrates how limited and uncertain data can be transformed into actionable knowledge to protect public health.
 
 ---
 
