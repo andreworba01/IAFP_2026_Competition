@@ -169,9 +169,23 @@ This work is submitted to the IAFP AI Benchmarking Student Competition on Predic
   - [Univariate Effect Size Analysis](#univariate-effect-size-analysis-cliffs-delta)
   - [Land-use Composition](#land-use-composition-by-listeria-presence)
   - [Biological Interpretation](#biological-interpretation)
-- [From Presence–Absence to Risk Metrics](#from-presenceabsence-prediction-to-quantitative-risk-metrics-translating-soil-surveillance-data-into-food-safetyrelevant-estimates)
+- [From Presence–Absence Prediction to Quantitative Risk Metrics](#from-presenceabsence-prediction-to-quantitative-risk-metrics)
+  - [Translating Soil Surveillance Data into Food Safety–Relevant Estimates](#translating-soil-surveillance-data-into-food-safetyrelevant-estimates)
+    - [Prevalence estimation](#prevalence-estimation)
+    - [Concentration modeling](#concentration-modeling)
 
+- [Integrating Weather Data to Enhance Environmental Risk Modeling](#integrating-weather-data-to-enhance-environmental-risk-modeling)
+  - [Weather Data Integration](#weather-data-integration)
+  - [Modeling with Enriched Environmental Features](#modeling-with-enriched-environmental-features)
+  - [Interpreting Environmental Drivers Using SHAP and Effect Size Analysis](#interpreting-environmental-drivers-using-shap-and-effect-size-analysis)
+  - [Spatial Risk Visualization](#spatial-risk-visualization)
+  - [Why This Map Matters for Food Safety](#why-this-map-matters-for-food-safety)
 
+- [Logistic Regression: Significant Predictors and Odds Ratios](#logistic-regression-significant-predictors-and-odds-ratios)
+  - [Reduced Logistic Regression Model](#reduced-logistic-regression-model)
+
+- [Integrated Modeling Summary and Food Safety Implications](#integrated-modeling-summary-and-food-safety-implications)
+- [References](#references)
 ---
 ## Exploratory Analysis and Preprocessing Results
 
