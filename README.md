@@ -1,4 +1,7 @@
 # RiskForger Team
+
+<img width="2750" height="1650" alt="Copy of Graphical_Abstract_Nature" src="https://github.com/user-attachments/assets/1cfdf1fa-1067-4830-afd3-5b7552df4441" />
+**Graphical Abstract**
 ## A Food Safety–Focused Machine Learning Framework for Predicting Soil Listeria Presence and Risk Hotspots
 
 🥬 This repository contains an end-to-end, reproducible **machine learning pipeline** developed for the **IAFP AI Benchmarking Student Competition on Predictive Food Safety Models**. The project addresses the challenge theme:
