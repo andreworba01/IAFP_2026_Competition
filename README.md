@@ -1,5 +1,5 @@
 # RiskForger Team
-## A Machine Learning Framework for Predicting Soil Listeria monocytogenes Presence in Agricultural Landscapes
+## A Food Safety–Focused Machine Learning Framework for Predicting Soil Listeria Presence and Risk Hotspots
 
 🥬 This repository contains an end-to-end, reproducible **machine learning pipeline** developed for the **IAFP AI Benchmarking Student Competition on Predictive Food Safety Models**. The project addresses the challenge theme:
 
