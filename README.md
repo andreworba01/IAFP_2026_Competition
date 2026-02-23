@@ -1,8 +1,9 @@
-# Listeria in Soil — IAFP AI Benchmarking Student Competition 🏆🦠
+# RiskForger Team
+## A Machine Learning Framework for Predicting Soil Listeria monocytogenes Presence in Agricultural Landscapes
 
 🥬 This repository contains an end-to-end, reproducible **machine learning pipeline** developed for the **IAFP AI Benchmarking Student Competition on Predictive Food Safety Models**. The project addresses the challenge theme:
 
-> **Predicting pathogen presence in food production environments**
+> **Predicting pathogen presence/absence and concentration in food production environments**
 
 Using a nationwide GIS-based dataset of U.S. soil samples, this work focuses on predicting the **presence or absence of *Listeria spp.* in soil** based on environmental, soil, climate, land-use, and geographic variables. The goal is to demonstrate how **AI/ML tools can support proactive food safety surveillance and risk mitigation** in agricultural and food production systems.
 
