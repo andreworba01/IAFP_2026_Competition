@@ -296,7 +296,8 @@ To reflect this priority, we:
 | CatBoost (recall-leaning) | 0.495447 | 58 | 5 | 7 | 55 | 0.887097 | 0.920635 | 0.903866 | 0.965438 | 0.970190 | 0.495447 |
 | RF (balanced) | 0.457408 | 53 | 10 | 8 | 54 | 0.870968 | 0.841270 | 0.856119 | 0.940348 | 0.944795 | 0.457408 |
 
-
+Best recall-focused tradeoff: HistGB gave the strongest balance for food-safety screening (Recall=0.919, Specificity=0.889, Balanced Acc=0.904) with few errors (FP=7, FN=5).
+•	Tuning outcome: HistGB was fine-tuned via CV; best settings were max_depth=8, learning_rate=0.05, max_iter=400, min_samples_leaf=5, l2_regularization=1.0, max_bins=255 (best CV ROC-AUC ≈ 0.920).
 ## Results
 ![AUC curve](outputs/AUC%20curve.png)
 --- 
