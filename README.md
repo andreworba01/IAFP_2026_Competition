@@ -1,6 +1,7 @@
 # RiskForger Team
 
-<img width="2750" height="1650" alt="Copy of Graphical_Abstract_Nature" src="https://github.com/user-attachments/assets/1cfdf1fa-1067-4830-afd3-5b7552df4441" />
+<img width="3125" height="1875" alt="Copy of Graphical_Abstract_Nature (1)" src="https://github.com/user-attachments/assets/506c24db-d81b-4117-84c4-6c76fb2d30ae" />
+
 **Graphical Abstract**
 
 
