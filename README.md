@@ -222,7 +222,7 @@ These patterns indicate structured but non-redundant predictors, supporting thei
 
 To quantify the magnitude and direction of associations between individual predictors and *Listeria* presence, **Cliff’s Delta** was used as a nonparametric effect size measure. This approach emphasizes practical relevance beyond statistical significance alone.
 
-#### Top Variables by Absolute Cliff’s Delta
+#### Table 1: Top Variables by Absolute Cliff’s Delta
 
 | Variable | Median (Absent) | Median (Present) | Δ (Present − Absent) | Cliff’s Δ | Adjusted p-value |
 |---------|-----------------|------------------|----------------------|-----------|------------------|
