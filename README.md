@@ -307,7 +307,7 @@ Best recall-focused tradeoff: **HistGB** gave the strongest balance for food-saf
 
 ![AUC curve](outputs/AUC%20curve.png)
 --- 
-### Summary of Spatila distribution of Listeria in soil samples across the United States. 
+### Summary of Spatial distribution of Listeria in soil samples across the United States. 
 
 To summarize geographic patterns in soil Listeria occurrence at a national scale, detections were aggregated by U.S. state and visualized as state-level prevalence. Figure 2 displays the proportion of samples positive for Listeria within each state, providing an interpretable overview of regional variability and potential spatial structure in contamination risk. States with no available samples are shown in grey, and differences should be interpreted cautiously because sampling intensity varied across states.
 
