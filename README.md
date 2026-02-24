@@ -306,6 +306,10 @@ Best recall-focused tradeoff: **HistGB** gave the strongest balance for food-saf
 •	Tuning outcome: HistGB was fine-tuned via CV; best settings were max_depth=8, learning_rate=0.05, max_iter=400, min_samples_leaf=5, l2_regularization=1.0, max_bins=255 (best CV ROC-AUC ≈ 0.920).
 
 ![AUC curve](outputs/AUC%20curve.png)
+
+**Figure 1.** ROC curves (test set) for benchmarked classifiers. Receiver operating characteristic (ROC) curves comparing model discrimination for predicting soil Listeria spp. presence/absence; legend values report test-set ROC AUC, and the dashed diagonal indicates no-discrimination.
+
+All models showed strong discrimination (ROC AUC ≈ 0.89–0.97). Although CatBoost and LightGBM achieved slightly higher AUC, HistGradientBoosting (HistGB) was selected because it provided the most suitable food-safety screening tradeoff by minimizing false negatives on the test set.
 --- 
 ### Summary of Spatial distribution of Listeria in soil samples across the United States. 
 
@@ -313,7 +317,7 @@ To summarize geographic patterns in soil Listeria occurrence at a national scale
 
 <img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/e0fb4600-2640-4b32-8d81-65b6a7ec9287" />
 
-##### **Figure 1. State-level prevalence of Listeria presence.**
+##### **Figure 2. State-level prevalence of Listeria presence.**
 State-level prevalence of Listeria presence estimated from soil samples aggregated by U.S. state. Prevalence is calculated as the proportion of samples positive for Listeria within each state. States with no available samples are shown in grey. Differences in prevalence should be interpreted with caution due to variability in sample size across states.
 
 Variation in state-level prevalence suggests that broader regional factors, including climatic conditions, dominant land use, and agricultural intensity, may influence Listeria occurrence. Nonetheless, differences in sampling effort among states introduce uncertainty, and observed prevalence patterns likely reflect a combination of environmental drivers and data availability.
@@ -482,7 +486,7 @@ To enhance model interpretability and support biologically meaningful inference,
 
 <img width="821" height="940" alt="image" src="https://github.com/user-attachments/assets/2daa327e-fb7a-4c3a-88dd-cb712fafd58d" />
 
-**Figure 2.** Predictor importance using SHAP (SHapley Additive exPlanations) values.
+**Figure 3.** Predictor importance using SHAP (SHapley Additive exPlanations) values.
 
 ### SHAP-Based Global Feature Importance
 
@@ -524,7 +528,7 @@ By combining predictive modeling, environmental enrichment, and hydrological con
 This map shows the model-predicted probability of Listeria presence at sampled sites, overlaid with nearby rivers and lakes. Higher-risk locations (e.g., ≥0.60) stand out as potential hotspots, helping farmers prioritize where to sample, focus water-related controls, and plan harvest timing to reduce contamination risk.
 
 <img width="2306" height="1238" alt="Rplot55" src="outputs/Predicted_probability_presence_rivers_lakes.png" />
-**Figure 3. ** Spatial distribution of predicted listeria presence with hydrological context. 
+**Figure 4.** Spatial distribution of predicted listeria presence with hydrological context. 
 
 ## Main Spatial Trends in Predicted *Listeria* Risk
 
