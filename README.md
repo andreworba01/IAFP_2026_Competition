@@ -508,7 +508,7 @@ Rather than relying solely on performance metrics, this dual interpretability st
 --- 
 ### Summary of Spatial distribution of Listeria in soil samples across the United States. 
 
-To summarize geographic patterns in soil Listeria occurrence at a national scale, detections were aggregated by U.S. state and visualized as state-level prevalence. Figure 2 displays the proportion of samples positive for Listeria within each state, providing an interpretable overview of regional variability and potential spatial structure in contamination risk. States with no available samples are shown in grey, and differences should be interpreted cautiously because sampling intensity varied across states.
+To summarize geographic patterns in soil Listeria occurrence at a national scale, detections were aggregated by U.S. state and visualized as state-level prevalence. Figure 3 displays the proportion of samples positive for Listeria within each state, providing an interpretable overview of regional variability and potential spatial structure in contamination risk. States with no available samples are shown in grey, and differences should be interpreted cautiously because sampling intensity varied across states.
 
 <img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/e0fb4600-2640-4b32-8d81-65b6a7ec9287" />
 
