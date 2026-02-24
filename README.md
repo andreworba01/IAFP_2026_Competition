@@ -290,7 +290,7 @@ To reflect this priority, we:
 - Ranked models primarily by **fewest FN**, then **fewest FP**, using **recall** as a tie-breaker.
 - Fine-tuned the best-performing model(s) via hyperparameter search and evaluated final performance on the held-out test set.
 
-### **Table2.** Ranked Model Results (Test Set)
+### **Table 2.** Ranked Model Results (Test Set)
 
 | Model | Threshold | TN | FP | FN | TP | Sensitivity (Recall) | Specificity | Balanced Accuracy | ROC AUC | Avg Precision | Chosen Thr (from OOF) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -309,17 +309,11 @@ Best recall-focused tradeoff: **HistGB** gave the strongest balance for food-saf
 --- 
 ### Summary of Spatila distribution of Listeria in soil samples across the United States. 
 
----
-<img width="2306" height="1238" alt="Rplot55" src="https://github.com/user-attachments/assets/84f5eba6-67cb-4dc3-bd9b-788cd56e4fd9" />
-
-#####  **Figure 1. Spatial distribution of Listeria soil samples incorporating elevation.**
-Spatial distribution of soil samples across the continental United States, with point color indicating Listeria presence (1) or absence (0) and point size proportional to sampling site elevation (m). State boundaries are shown for geographic context. This visualization highlights heterogeneity in both sampling elevation and Listeria occurrence across regions.
-
-The incorporation of elevation suggests a potential association between Listeria absence and higher-elevation sampling sites, as several negative samples (label = 0) are observed at comparatively higher elevations. While positive samples are present across a range of elevations, this visual pattern indicates that elevation—or correlated environmental factors such as temperature, moisture availability, and soil characteristics—may influence Listeria persistence. However, this observation is qualitative and warrants formal statistical evaluation.
+To summarize geographic patterns in soil Listeria occurrence at a national scale, detections were aggregated by U.S. state and visualized as state-level prevalence. Figure 2 displays the proportion of samples positive for Listeria within each state, providing an interpretable overview of regional variability and potential spatial structure in contamination risk. States with no available samples are shown in grey, and differences should be interpreted cautiously because sampling intensity varied across states.
 
 <img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/e0fb4600-2640-4b32-8d81-65b6a7ec9287" />
 
-##### **Figure 2. State-level prevalence of Listeria presence.**
+##### **Figure 1. State-level prevalence of Listeria presence.**
 State-level prevalence of Listeria presence estimated from soil samples aggregated by U.S. state. Prevalence is calculated as the proportion of samples positive for Listeria within each state. States with no available samples are shown in grey. Differences in prevalence should be interpreted with caution due to variability in sample size across states.
 
 Variation in state-level prevalence suggests that broader regional factors, including climatic conditions, dominant land use, and agricultural intensity, may influence Listeria occurrence. Nonetheless, differences in sampling effort among states introduce uncertainty, and observed prevalence patterns likely reflect a combination of environmental drivers and data availability.
@@ -488,7 +482,7 @@ To enhance model interpretability and support biologically meaningful inference,
 
 <img width="821" height="940" alt="image" src="https://github.com/user-attachments/assets/2daa327e-fb7a-4c3a-88dd-cb712fafd58d" />
 
-**Figure 3.** Predictor importance using SHAP (SHapley Additive exPlanations) values.
+**Figure 2.** Predictor importance using SHAP (SHapley Additive exPlanations) values.
 
 ### SHAP-Based Global Feature Importance
 
@@ -530,7 +524,7 @@ By combining predictive modeling, environmental enrichment, and hydrological con
 This map shows the model-predicted probability of Listeria presence at sampled sites, overlaid with nearby rivers and lakes. Higher-risk locations (e.g., ≥0.60) stand out as potential hotspots, helping farmers prioritize where to sample, focus water-related controls, and plan harvest timing to reduce contamination risk.
 
 <img width="2306" height="1238" alt="Rplot55" src="outputs/Predicted_probability_presence_rivers_lakes.png" />
-**Figure 4. ** Spatial distribution of predicted listeria presence with hydrological context. 
+**Figure 3. ** Spatial distribution of predicted listeria presence with hydrological context. 
 
 ## Main Spatial Trends in Predicted *Listeria* Risk
 
