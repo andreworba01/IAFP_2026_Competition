@@ -310,6 +310,7 @@ Best recall-focused tradeoff: **HistGB** gave the strongest balance for food-saf
 **Figure 1.** ROC curves (test set) for benchmarked classifiers. Receiver operating characteristic (ROC) curves comparing model discrimination for predicting soil Listeria spp. presence/absence; legend values report test-set ROC AUC, and the dashed diagonal indicates no-discrimination.
 
 All models showed strong discrimination (ROC AUC ≈ 0.89–0.97). Although CatBoost and LightGBM achieved slightly higher AUC, HistGradientBoosting (HistGB) was selected because it provided the most suitable food-safety screening tradeoff by minimizing false negatives on the test set.
+
 --- 
 ### Summary of Spatial distribution of Listeria in soil samples across the United States. 
 
