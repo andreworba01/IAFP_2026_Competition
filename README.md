@@ -488,6 +488,8 @@ To enhance model interpretability and support biologically meaningful inference,
 
 <img width="821" height="940" alt="image" src="https://github.com/user-attachments/assets/2daa327e-fb7a-4c3a-88dd-cb712fafd58d" />
 
+**Figure 3.** Predictor importance using SHAP (SHapley Additive exPlanations) values.
+
 ### SHAP-Based Global Feature Importance
 
 Global SHAP analysis revealed that spatial and environmental variables were the primary drivers of model predictions. Longitude emerged as the most influential feature, reflecting large-scale regional gradients in environmental conditions and land use. Moisture and temperature-related variables (mean, minimum, and maximum temperature; relative humidity) also contributed substantially, highlighting the importance of microclimatic conditions in *Listeria* persistence.
@@ -528,6 +530,7 @@ By combining predictive modeling, environmental enrichment, and hydrological con
 This map shows the model-predicted probability of Listeria presence at sampled sites, overlaid with nearby rivers and lakes. Higher-risk locations (e.g., ≥0.60) stand out as potential hotspots, helping farmers prioritize where to sample, focus water-related controls, and plan harvest timing to reduce contamination risk.
 
 <img width="2306" height="1238" alt="Rplot55" src="outputs/Predicted_probability_presence_rivers_lakes.png" />
+**Figure 4. ** Spatial distribution of predicted listeria presence with hydrological context. 
 
 ## Main Spatial Trends in Predicted *Listeria* Risk
 
