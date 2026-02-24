@@ -311,17 +311,7 @@ Best recall-focused tradeoff: **HistGB** gave the strongest balance for food-saf
 
 All models showed strong discrimination (ROC AUC ≈ 0.89–0.97). Although CatBoost and LightGBM achieved slightly higher AUC, HistGradientBoosting (HistGB) was selected because it provided the most suitable food-safety screening tradeoff by minimizing false negatives on the test set.
 
---- 
-### Summary of Spatial distribution of Listeria in soil samples across the United States. 
 
-To summarize geographic patterns in soil Listeria occurrence at a national scale, detections were aggregated by U.S. state and visualized as state-level prevalence. Figure 2 displays the proportion of samples positive for Listeria within each state, providing an interpretable overview of regional variability and potential spatial structure in contamination risk. States with no available samples are shown in grey, and differences should be interpreted cautiously because sampling intensity varied across states.
-
-<img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/e0fb4600-2640-4b32-8d81-65b6a7ec9287" />
-
-##### **Figure 2. State-level prevalence of Listeria presence.**
-State-level prevalence of Listeria presence estimated from soil samples aggregated by U.S. state. Prevalence is calculated as the proportion of samples positive for Listeria within each state. States with no available samples are shown in grey. Differences in prevalence should be interpreted with caution due to variability in sample size across states.
-
-Variation in state-level prevalence suggests that broader regional factors, including climatic conditions, dominant land use, and agricultural intensity, may influence Listeria occurrence. Nonetheless, differences in sampling effort among states introduce uncertainty, and observed prevalence patterns likely reflect a combination of environmental drivers and data availability.
 
 ---
 ## From Presence–Absence Prediction to Quantitative Risk Metrics: Translating Soil Surveillance Data into Food Safety–Relevant Estimates
@@ -487,7 +477,7 @@ To enhance model interpretability and support biologically meaningful inference,
 
 <img width="821" height="940" alt="image" src="https://github.com/user-attachments/assets/2daa327e-fb7a-4c3a-88dd-cb712fafd58d" />
 
-**Figure 3.** Predictor importance using SHAP (SHapley Additive exPlanations) values.
+**Figure 2.** Predictor importance using SHAP (SHapley Additive exPlanations) values.
 
 ### SHAP-Based Global Feature Importance
 
@@ -514,6 +504,17 @@ This integrative interpretability framework strengthens confidence in model outp
 Rather than relying solely on performance metrics, this dual interpretability strategy enables evaluation of ecological plausibility and public health relevance, which are critical for environmental pathogen risk assessment.
 
 ---
+--- 
+### Summary of Spatial distribution of Listeria in soil samples across the United States. 
+
+To summarize geographic patterns in soil Listeria occurrence at a national scale, detections were aggregated by U.S. state and visualized as state-level prevalence. Figure 2 displays the proportion of samples positive for Listeria within each state, providing an interpretable overview of regional variability and potential spatial structure in contamination risk. States with no available samples are shown in grey, and differences should be interpreted cautiously because sampling intensity varied across states.
+
+<img width="2306" height="1238" alt="image" src="https://github.com/user-attachments/assets/e0fb4600-2640-4b32-8d81-65b6a7ec9287" />
+
+##### **Figure 3. State-level prevalence of Listeria presence.**
+State-level prevalence of Listeria presence estimated from soil samples aggregated by U.S. state. Prevalence is calculated as the proportion of samples positive for Listeria within each state. States with no available samples are shown in grey. Differences in prevalence should be interpreted with caution due to variability in sample size across states.
+
+Variation in state-level prevalence suggests that broader regional factors, including climatic conditions, dominant land use, and agricultural intensity, may influence Listeria occurrence. Nonetheless, differences in sampling effort among states introduce uncertainty, and observed prevalence patterns likely reflect a combination of environmental drivers and data availability.
 
 ### Spatial Risk Visualization
 
