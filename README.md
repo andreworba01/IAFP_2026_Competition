@@ -222,7 +222,7 @@ These patterns indicate structured but non-redundant predictors, supporting thei
 
 To quantify the magnitude and direction of associations between individual predictors and *Listeria* presence, **Cliff’s Delta** was used as a nonparametric effect size measure. This approach emphasizes practical relevance beyond statistical significance alone.
 
-#### Table 1: Top Variables by Absolute Cliff’s Delta
+#### **Table 1.** Top Variables by Absolute Cliff’s Delta
 
 | Variable | Median (Absent) | Median (Present) | Δ (Present − Absent) | Cliff’s Δ | Adjusted p-value |
 |---------|-----------------|------------------|----------------------|-----------|------------------|
@@ -290,7 +290,7 @@ To reflect this priority, we:
 - Ranked models primarily by **fewest FN**, then **fewest FP**, using **recall** as a tie-breaker.
 - Fine-tuned the best-performing model(s) via hyperparameter search and evaluated final performance on the held-out test set.
 
-### Ranked Model Results (Test Set)
+### **Table2.** Ranked Model Results (Test Set)
 
 | Model | Threshold | TN | FP | FN | TP | Sensitivity (Recall) | Specificity | Balanced Accuracy | ROC AUC | Avg Precision | Chosen Thr (from OOF) |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -333,7 +333,7 @@ Rather than limiting our analysis to binary predictions, we leveraged the availa
 
 Although <mark> these estimates are subject to uncertainty—particularly in regions with limited sampling—explicitly modeling</mark> this uncertainty strengthens risk-based decision-making. By moving beyond classification accuracy and incorporating uncertainty-aware concentration estimates, our approach provides more actionable insights for prioritizing interventions, guiding monitoring efforts, and supporting preventive food safety strategies.
 
-**Table 2.** State-level prevalence and concentration estimates of Listeria contamination in lettuce. For each state, the total number of samples (n), number of positives (k), estimated prevalence with 95% confidence intervals, and modeled mean and 95th percentile concentrations (Cs_Li_mean and Cs_Li_q95) are shown.
+**Table 3.** State-level prevalence and concentration estimates of Listeria contamination in lettuce. For each state, the total number of samples (n), number of positives (k), estimated prevalence with 95% confidence intervals, and modeled mean and 95th percentile concentrations (Cs_Li_mean and Cs_Li_q95) are shown.
 
 | State          | n  | Estimated Prevalence (π̂) | pU    | CI (95%)         | Cs_Li_mean (CFU/g) | sim_q95 (CFU/g) |
 |----------------|----|---------------------------|-------|------------------|-------------------|----------------|
@@ -561,7 +561,7 @@ Multivariable logistic regression analysis identified several spatial, climatic,
 
 ---
 
-### Spatial and Geographic Factors
+### **Table 4.** Spatial and Geographic Factors
 
 | Variable   | p-value        | Interpretation                              |
 |------------|---------------|----------------------------------------------|
@@ -573,7 +573,7 @@ These results indicate strong spatial structure in *Listeria* occurrence, consis
 
 ---
 
-### Temperature Variables
+### **Table 5.** Temperature Variables
 
 | Variable   | p-value     |
 |------------|-------------|
@@ -587,7 +587,7 @@ This supports the biological expectation that *Listeria* survival and growth dep
 
 ---
 
-### Humidity Variables
+### **Table 6.** Humidity Variables
 
 | Variable | p-value      |
 |----------|--------------|
@@ -606,7 +606,7 @@ Overall, humidity emerged as a major environmental driver of contamination risk.
 
 ---
 
-### Precipitation Variables
+### **Table 7.** Precipitation Variables
 
 | Variable       | p-value      |
 |----------------|--------------|
@@ -619,7 +619,7 @@ This supports the hypothesis of water-mediated transport and redistribution of *
 
 ---
 
-### Wind Variables
+### **Table 8.** Wind Variables
 
 | Variable  | p-value      |
 |-----------|--------------|
@@ -636,7 +636,7 @@ These effects may be related to:
 
 ---
 
-### Temporal Effects
+### **Table 9.** Temporal Effects
 
 | Variable       | p-value   |
 |----------------|-----------|
@@ -656,7 +656,7 @@ OR > 1 indicates increased odds of detection, while OR < 1 indicates decreased o
 
 ---
 
-### Statistically Significant Predictors (p < 0.05)
+### **Table 10.** Statistically Significant Predictors (p < 0.05)
 
 | Variable       | OR (per unit) | OR (Scaled) | 95% CI        | p-value   | Interpretation |
 |----------------|--------------|------------|--------------|-----------|----------------|
