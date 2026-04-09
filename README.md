@@ -4,6 +4,29 @@
 
 **Graphical Abstract**
 
+---
+<div align="center">
+
+# 🌐 RiskForger Web Platform  
+### **Interactive AI-Powered *Listeria* Risk Prediction Dashboard**
+
+<p align="center">
+  <a href="https://aicompetition-v1.streamlit.app/">
+    <img src="https://img.shields.io/badge/Launch-Live%20Web%20Application-0A66C2?style=for-the-badge&logo=streamlit&logoColor=white" alt="Launch Web App"/>
+  </a>
+</p>
+
+<p align="center">
+  <b>A prototype web-based decision-support tool for farmers, researchers, and policy makers</b><br>
+  Predict <i>Listeria</i> presence probability and estimated concentration using location-specific and environmental inputs across the United States.
+</p>
+
+</div>
+
+
+
+
+---
 
 ## A Food Safety–Focused Machine Learning Framework for Predicting Soil Listeria Presence and Risk Hotspots
 
